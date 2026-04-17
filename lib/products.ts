@@ -345,7 +345,7 @@ export const products: Product[] = [
       "Machinery appraisals",
       "Process optimisation",
     ],
-    image: "/images/about/about-factory-operations.jpg",
+    image: "/images/about/about-factory-operations.png",
   },
   {
     id: "plm-erp-development",
@@ -362,7 +362,7 @@ export const products: Product[] = [
       "API-first architecture",
       "Ongoing support & updates",
     ],
-    image: "/images/about/about-factory-operations.jpg",
+    image: "/images/about/about-factory-operations.png",
   },
 ];
 

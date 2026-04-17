@@ -33,7 +33,7 @@ export default function About() {
         <div style={{ position: "relative", height: 560 }}>
           <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
             <Image
-              src="/images/about/about-factory-operations.jpg"
+              src="/images/about/about-factory-operations.png"
               alt="Factory operations — Denova Technologies"
               fill
               style={{ objectFit: "cover" }}

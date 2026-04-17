@@ -330,7 +330,7 @@ export default function Hero() {
             }}
           >
             <Image
-              src="/images/hero/hero-cutting-room.jpg"
+              src="/images/hero/hero-cutting-room.png"
               alt="Industrial fabric cutting room"
               fill
               style={{ objectFit: "cover", opacity: 0.6 }}

@@ -10,7 +10,7 @@ const industries = [
     num: "01",
     name: "Apparel & Garments",
     desc: "Mass production garment factories across Sri Lanka and Bangladesh. Full workflow from design room to cutting floor.",
-    image: "/images/hero/hero-factory-floor.jpg",
+    image: "/images/hero/hero-factory-floor.png",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f62fe" strokeWidth="2" strokeLinecap="round">
         <path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.57a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.57a2 2 0 00-1.34-2.23z" />
@@ -21,7 +21,7 @@ const industries = [
     num: "02",
     name: "Denim & Sportswear",
     desc: "High-tension fabric handling and spreading for denim, technical sportswear and stretch fabric manufacturing.",
-    image: "/images/hero/hero-cutting-room.jpg",
+    image: "/images/hero/hero-cutting-room.png",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f62fe" strokeWidth="2" strokeLinecap="round">
         <circle cx="12" cy="12" r="10" />

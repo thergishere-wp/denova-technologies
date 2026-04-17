@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Authorized reseller and distributor of industrial machinery and software for apparel manufacturers in Sri Lanka and Bangladesh.",
     images: [
       {
-        url: "/images/hero/hero-factory-floor.jpg",
+        url: "/images/hero/hero-factory-floor.png",
         width: 1200,
         height: 630,
         alt: "Denova Technologies — Industrial Machinery Solutions",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Denova Technologies Ltd | Industrial Machinery Solutions",
     description:
       "Authorized reseller and distributor of industrial machinery for apparel manufacturers in Sri Lanka and Bangladesh.",
-    images: ["/images/hero/hero-factory-floor.jpg"],
+    images: ["/images/hero/hero-factory-floor.png"],
   },
   alternates: {
     canonical: siteUrl,
