@@ -54,7 +54,7 @@ export default function Countries() {
           className="mb-16"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            06 — Global Presence
+            09 — Global Presence
           </div>
           <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Countries We Serve

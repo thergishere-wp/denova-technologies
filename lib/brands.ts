@@ -14,6 +14,7 @@ export interface Brand {
   name: string;
   country?: string;
   founded?: number;
+  shortDescription: string;
   description: string;
   category: string;
   softwareProducts: string[];
@@ -31,6 +32,8 @@ export const brands: Brand[] = [
     country: "Taiwan",
     founded: 1982,
     category: "CAD Solutions",
+    shortDescription:
+      "CAD software that turns your patterns into cutting-ready files — faster, with less fabric waste.",
     description:
       "Founded in Taiwan in 1982, DOCAD has over four decades of experience in developing CAD/CAM solutions for the apparel industry. Its integrated software and hardware solutions help manufacturers improve accuracy, optimize fabric utilization, and streamline production workflows.",
     softwareProducts: [
@@ -54,6 +57,8 @@ export const brands: Brand[] = [
     country: "Turkey",
     founded: 1984,
     category: "Spreading System",
+    shortDescription:
+      "Automated machines that spread and prepare fabric for cutting, precisely and consistently.",
     description:
       "Founded in 1984, Özer Makina is a Turkish manufacturer of apparel machinery specializing in fabric spreading, fabric inspection, and fabric relaxing machines. The company provides reliable and efficient solutions designed to improve productivity, fabric quality, and production efficiency in garment manufacturing.",
     softwareProducts: [],
@@ -78,6 +83,8 @@ export const brands: Brand[] = [
     country: "China",
     founded: 1993,
     category: "Sample/Pattern Cutters & Multilayer Cutting System",
+    shortDescription:
+      "Digital cutting machines that cut fabric automatically — one layer at a time or many at once.",
     description:
       "Founded in 1993, JWEI is a leading manufacturer of intelligent digital cutting solutions for the apparel industry. With over 30 years of experience, the company provides high-precision fabric cutting systems that improve production efficiency, accuracy, and automation. JWEI serves customers in more than 120 countries and regions.",
     softwareProducts: [],
@@ -106,6 +113,8 @@ export const brands: Brand[] = [
     name: "C-TEX",
     country: "UK",
     category: "Fabric Relaxing and Inspection",
+    shortDescription:
+      "Machines that inspect and relax fabric rolls before cutting, catching defects early.",
     description:
       "Since the first installation of C-TEX products over 20 years ago, they have enjoyed developing their products, nurturing them and working with the customers. This approach and attitude has created one of the most trusted brands in apparel, with over 1000 installations worldwide. C-TEX is proudly manufactured in the United Kingdom.",
     softwareProducts: ["C-TEX Color", "C-TEX Master"],
@@ -128,6 +137,8 @@ export const brands: Brand[] = [
     country: "China",
     founded: 2009,
     category: "Industrial Engineering Software",
+    shortDescription:
+      "Software that tracks your factory floor in real time, so you always know how production is going.",
     description:
       "Founded in 2009, MU Big Data is a leading provider of intelligent garment manufacturing solutions. The company specializes in ERP, MES, SCM, APS, and digital production systems that help apparel manufacturers improve efficiency, automation, and production management. With 300+ customers in 6+ countries and over 15 years of experience, MU supports smarter and more flexible apparel manufacturing.",
     softwareProducts: ["MU-GST", "MU-MES", "U-PAD"],

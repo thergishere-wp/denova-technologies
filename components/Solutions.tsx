@@ -72,7 +72,7 @@ export default function Solutions() {
           className="mb-16"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            02 — What We Offer
+            03 — What We Offer
           </div>
           <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Our Solutions

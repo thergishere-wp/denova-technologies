@@ -4,18 +4,19 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 
+const lead = {
+  name: "Dinesh Ratnayake",
+  title: "Founder & Chief Executive Officer (CEO)",
+  credentials: [
+    "30+ years in apparel machinery & software solutions across South Asia",
+    "Former General Manager, DMS Garment Technologies & DMS Technologies Bangladesh",
+    "MBA, Australian Institute of Business + Diploma in Marketing",
+    "Drives DeNova's mission: leading manufacturers into next-generation automated operations",
+  ],
+  image: "/team/dinesh-ratnayake.png",
+};
+
 const team = [
-  {
-    name: "Dinesh Ratnayake",
-    title: "Founder & CEO",
-    credentials: [
-      "30+ years in apparel machinery & software solutions across South Asia",
-      "Former General Manager, DMS Garment Technologies & DMS Technologies Bangladesh",
-      "MBA, Australian Institute of Business + Diploma in Marketing",
-      "Drives DeNova's mission: leading manufacturers into next-generation automated operations",
-    ],
-    image: "/team/dinesh-ratnayake.png",
-  },
   {
     name: "Shams Zaman",
     title: "Director / COO",
@@ -76,7 +77,7 @@ export default function Team() {
           className="mb-16"
         >
           <div className="text-[#1E6CC8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            07 — The People
+            10 — The People
           </div>
           <h2 className="text-5xl font-bold uppercase tracking-tight text-[#142250] mb-4">
             Meet Our Team
@@ -84,26 +85,63 @@ export default function Team() {
           <div className="w-20 h-0.5 bg-[#29B8E8]" />
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Founder — full-width featured card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="bg-[#142250] mb-6 flex flex-col md:flex-row overflow-hidden"
+        >
+          <div className="relative w-full md:w-80 h-72 md:h-auto shrink-0 bg-[#E2E8F0]">
+            <Image
+              src={lead.image}
+              alt={`${lead.name} — ${lead.title}`}
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 768px) 100vw, 320px"
+              priority
+            />
+          </div>
+          <div className="p-8 md:p-10 flex flex-col justify-center">
+            <h3 className="text-white font-bold text-2xl md:text-3xl uppercase tracking-wide mb-1">
+              {lead.name}
+            </h3>
+            <p className="text-[#29B8E8] text-sm font-bold uppercase tracking-widest mb-6">
+              {lead.title}
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+              {lead.credentials.map((c) => (
+                <li key={c} className="flex items-start gap-2">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 mt-1" aria-hidden="true">
+                    <path d="M2 7l4 4 6-6" stroke="#29B8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <span className="text-white/70 text-sm leading-relaxed">{c}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
+
+        {/* Rest of the team — 2×2 grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {team.map((member, i) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="group hover:-translate-y-1 transition-transform duration-150"
+              transition={{ delay: 0.15 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="group hover:-translate-y-1 transition-transform duration-150 flex flex-col sm:flex-row bg-[#142250] overflow-hidden"
             >
-              <div className="relative h-64 bg-[#E2E8F0] overflow-hidden mb-0">
+              <div className="relative w-full sm:w-40 h-56 sm:h-auto shrink-0 bg-[#E2E8F0]">
                 <Image
                   src={member.image}
                   alt={`${member.name} — ${member.title}`}
                   fill
                   className="object-cover object-top transition-all duration-300"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, 160px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#142250]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <div className="bg-[#142250] p-6">
+              <div className="p-6 flex-1">
                 <h3 className="text-white font-bold text-lg uppercase tracking-wide mb-1">
                   {member.name}
                 </h3>

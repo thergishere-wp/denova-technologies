@@ -40,7 +40,7 @@ export default function Consultancy() {
           className="mb-6"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            08 — Services
+            06 — Services
           </div>
           <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Apparel Factory Consultancy

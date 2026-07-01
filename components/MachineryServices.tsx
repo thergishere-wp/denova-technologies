@@ -52,7 +52,7 @@ export default function MachineryServices() {
           className="mb-6"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            09 — Machinery Services
+            07 — Machinery Services
           </div>
           <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Machinery Services &amp; Spare Parts

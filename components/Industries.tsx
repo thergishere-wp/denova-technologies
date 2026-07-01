@@ -42,7 +42,7 @@ export default function Industries() {
           className="mb-16"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            04 — Markets
+            02 — Markets
           </div>
           <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Industries We Serve
