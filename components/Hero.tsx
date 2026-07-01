@@ -1,0 +1,166 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const wordVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.12, duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+  }),
+};
+
+export default function Hero() {
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center bg-[#142250] overflow-hidden"
+    >
+      {/* Background image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
+          alt="Industrial manufacturing facility"
+          fill
+          priority
+          className="object-cover opacity-15"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#142250] via-[#142250]/85 to-[#142250]/30" />
+      </div>
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-16 pt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-24">
+          {/* Left: text */}
+          <div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              className="mb-2"
+            >
+              <div className="overflow-hidden">
+                <motion.h1
+                  custom={0}
+                  variants={wordVariants}
+                  className="text-[2.2rem] xs:text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold uppercase tracking-tight text-white leading-[0.9] mb-2"
+                  style={{ hyphens: "none" }}
+                >
+                  ADVANCED
+                </motion.h1>
+              </div>
+              <div className="overflow-hidden">
+                <motion.h1
+                  custom={1}
+                  variants={wordVariants}
+                  className="text-[2.2rem] xs:text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold uppercase tracking-tight text-[#29B8E8] leading-[0.9] mb-8"
+                  style={{ hyphens: "none" }}
+                >
+                  MANUFACTURING
+                </motion.h1>
+              </div>
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="text-[#94A3B8] text-lg leading-relaxed max-w-lg mb-10"
+            >
+              Providing cutting-edge machinery and intelligent software systems
+              for apparel and non-apparel industries in Sri Lanka &amp; Bangladesh.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.75, duration: 0.5 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <a
+                href="#solutions"
+                className="bg-[#1E6CC8] text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#29B8E8] transition-colors duration-150 text-center cursor-pointer"
+              >
+                Explore Solutions
+              </a>
+              <a
+                href="#about"
+                className="border border-white/30 text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-white/10 transition-colors duration-150 text-center cursor-pointer flex items-center justify-center gap-2"
+              >
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <circle cx="8" cy="8" r="6" stroke="#29B8E8" strokeWidth="1.5" />
+                  <path d="M8 5v3l2 2" stroke="#29B8E8" strokeWidth="1.5" strokeLinecap="round" />
+                </svg>
+                Discover DeNova
+              </a>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              className="mt-16 flex gap-10 border-t border-white/10 pt-8"
+            >
+              {[
+                { value: "25+", label: "Years Experience" },
+                { value: "5", label: "Global Brands" },
+                { value: "4", label: "Countries Served" },
+              ].map((stat) => (
+                <div key={stat.label}>
+                  <div className="text-3xl font-mono font-bold text-white">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-[#94A3B8] uppercase tracking-wider mt-1">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Right: image panel */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="hidden lg:block relative h-[600px]"
+          >
+            {/* Diagonal clip frame */}
+            <div
+              className="absolute inset-0 border-l-2 border-[#29B8E8]/40 overflow-hidden"
+              style={{ clipPath: "polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?q=80&w=1200&auto=format&fit=crop"
+                alt="Precision automated cutting machine in a modern factory"
+                fill
+                className="object-cover"
+                sizes="50vw"
+              />
+              <div className="absolute inset-0 bg-[#1E6CC8]/20" />
+            </div>
+            {/* Cyan accent line */}
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-[#29B8E8] to-transparent" />
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      >
+        <div className="text-[#94A3B8] text-[10px] uppercase tracking-widest">Scroll</div>
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+          className="w-0.5 h-8 bg-gradient-to-b from-[#29B8E8] to-transparent"
+        />
+      </motion.div>
+    </section>
+  );
+}
