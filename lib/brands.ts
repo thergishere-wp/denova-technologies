@@ -3,6 +3,11 @@ export interface Product {
   type: "software" | "hardware";
 }
 
+export interface ProductGroup {
+  title: string;
+  items: string[];
+}
+
 export interface Brand {
   id: string;
   number: string;
@@ -13,6 +18,7 @@ export interface Brand {
   category: string;
   softwareProducts: string[];
   hardwareProducts: string[];
+  productGroups?: ProductGroup[];
   benefits: string[];
   accentColor: string;
 }
@@ -24,21 +30,20 @@ export const brands: Brand[] = [
     name: "DOCAD",
     country: "Taiwan",
     founded: 1982,
-    category: "CAD & Pattern Making Software",
+    category: "CAD Solutions",
     description:
-      "DOCAD is a world-leading CAD/CAM software provider for the apparel industry, delivering precision pattern creation and marker optimization tools used by manufacturers globally.",
+      "Founded in Taiwan in 1982, DOCAD has over four decades of experience in developing CAD/CAM solutions for the apparel industry. Its integrated software and hardware solutions help manufacturers improve accuracy, optimize fabric utilization, and streamline production workflows.",
     softwareProducts: [
       "Pattern Creation",
       "Marker Making",
-      "Auto-Marker Optimization",
-      "Grading System",
+      "Auto-Marker",
     ],
     hardwareProducts: ["Inkjet Plotter", "Digitizer", "Pattern Cutter"],
     benefits: [
-      "Reduces fabric waste by up to 15%",
-      "Faster time-to-sample",
-      "Industry-standard file compatibility",
-      "Full after-sales training",
+      "Fast Pattern Development",
+      "Accurate Pattern Creation",
+      "Integrated Hardware Support",
+      "Complete CAD/CAM Workflow",
     ],
     accentColor: "#29B8E8",
   },
@@ -48,21 +53,21 @@ export const brands: Brand[] = [
     name: "ÖZER MAKİNA",
     country: "Turkey",
     founded: 1984,
-    category: "Automatic Spreading & Cutting Systems",
+    category: "Spreading System",
     description:
-      "Özer Makina manufactures high-precision automatic fabric spreading and cutting systems engineered for high-throughput apparel production environments.",
+      "Founded in 1984, Özer Makina is a Turkish manufacturer of apparel machinery specializing in fabric spreading, fabric inspection, and fabric relaxing machines. The company provides reliable and efficient solutions designed to improve productivity, fabric quality, and production efficiency in garment manufacturing.",
     softwareProducts: [],
     hardwareProducts: [
       "Automatic Spreading Machine",
-      "Air Floatation Tables",
-      "Conveyorized Table",
+      "Air Floatation Spreading Tables",
+      "Conveyorize Spreading Table",
       "Fabric Loaders",
     ],
     benefits: [
-      "Reduces spreading labor by 60%",
-      "Handles all fabric types",
-      "Robust Turkish engineering",
-      "CE certified",
+      "Uniform fabric spreading",
+      "Prevents fabric distortion",
+      "Improves cutting accuracy",
+      "Handles delicate fabrics",
     ],
     accentColor: "#1E6CC8",
   },
@@ -72,16 +77,26 @@ export const brands: Brand[] = [
     name: "JINGWEI / JWEI",
     country: "China",
     founded: 1993,
-    category: "Automatic Spreading & Cutting Systems",
+    category: "Sample/Pattern Cutters & Multilayer Cutting System",
     description:
-      "JWEI is a leading manufacturer of precision automated cutting systems, delivering high-speed, high-accuracy solutions for fabric and flexible materials processing.",
+      "Founded in 1993, JWEI is a leading manufacturer of intelligent digital cutting solutions for the apparel industry. With over 30 years of experience, the company provides high-precision fabric cutting systems that improve production efficiency, accuracy, and automation. JWEI serves customers in more than 120 countries and regions.",
     softwareProducts: [],
-    hardwareProducts: ["Pattern Cutter", "Template Cutter", "Knife Cutter"],
+    hardwareProducts: [],
+    productGroups: [
+      {
+        title: "Sample/Pattern Cutters",
+        items: ["Pattern Cutter", "Template Cutter", "Sample Fabric Cutter"],
+      },
+      {
+        title: "Multilayer Cutting System",
+        items: ["Low Ply Cutting", "High Ply Cutting"],
+      },
+    ],
     benefits: [
-      "Sub-millimeter cutting accuracy",
-      "High-speed production output",
-      "Low material waste",
-      "Easy maintenance design",
+      "Precise cutting",
+      "Less fabric waste",
+      "Faster production",
+      "Lower labor costs",
     ],
     accentColor: "#1E6CC8",
   },
@@ -89,19 +104,20 @@ export const brands: Brand[] = [
     id: "ctex",
     number: "04",
     name: "C-TEX",
-    category: "Smart Factory Solutions",
+    country: "UK",
+    category: "Fabric Relaxing and Inspection",
     description:
-      "C-TEX delivers advanced fabric inspection and relaxing machines that integrate seamlessly with smart factory systems, ensuring quality at every stage of production.",
+      "Since the first installation of C-TEX products over 20 years ago, they have enjoyed developing their products, nurturing them and working with the customers. This approach and attitude has created one of the most trusted brands in apparel, with over 1000 installations worldwide. C-TEX is proudly manufactured in the United Kingdom.",
     softwareProducts: ["C-TEX Color", "C-TEX Master"],
     hardwareProducts: [
       "Fabric Inspection Machine",
       "Fabric Relaxing Machine",
     ],
     benefits: [
-      "100% automated fabric inspection",
-      "Defect detection at production speed",
-      "Data export for ERP integration",
-      "Reduces QC labor cost",
+      "Reliable Fabric Inspection",
+      "Improved Fabric Quality",
+      "Increased Production Efficiency",
+      "Trusted by 1000+ installations",
     ],
     accentColor: "#29B8E8",
   },
@@ -113,14 +129,14 @@ export const brands: Brand[] = [
     founded: 2009,
     category: "Industrial Engineering Software",
     description:
-      "MU Big Data develops intelligent industrial engineering and manufacturing execution system software, providing real-time analytics and smart factory digitalization.",
-    softwareProducts: ["MU-GST (IE Software)", "MU-MES (Factory MES)", "U-PAD (Shop Floor Tablet)"],
+      "Founded in 2009, MU Big Data is a leading provider of intelligent garment manufacturing solutions. The company specializes in ERP, MES, SCM, APS, and digital production systems that help apparel manufacturers improve efficiency, automation, and production management. With 300+ customers in 6+ countries and over 15 years of experience, MU supports smarter and more flexible apparel manufacturing.",
+    softwareProducts: ["MU-GST", "MU-MES", "U-PAD"],
     hardwareProducts: [],
     benefits: [
-      "Real-time production visibility",
-      "Line balancing optimization",
-      "Mobile-first shop floor UI",
-      "Integrates with existing ERP",
+      "Improved Productivity",
+      "Factory Visibility",
+      "Optimized Production",
+      "Faster Decision Making",
     ],
     accentColor: "#29B8E8",
   },

@@ -6,6 +6,8 @@ import Solutions from "@/components/Solutions";
 import Products from "@/components/Products";
 import Industries from "@/components/Industries";
 import WhyUs from "@/components/WhyUs";
+import Consultancy from "@/components/Consultancy";
+import MachineryServices from "@/components/MachineryServices";
 import Countries from "@/components/Countries";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
@@ -23,6 +25,8 @@ export default function Home() {
         <Products />
         <Industries />
         <WhyUs />
+        <Consultancy />
+        <MachineryServices />
         <Countries />
         <Team />
         <Contact />

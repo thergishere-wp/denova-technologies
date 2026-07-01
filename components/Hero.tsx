@@ -34,27 +34,27 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-16 pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-24">
           {/* Left: text */}
-          <div>
+          <div className="min-w-0 w-full overflow-visible">
             <motion.div
               initial="hidden"
               animate="visible"
-              className="mb-2"
+              className="mb-2 overflow-visible"
             >
-              <div className="overflow-hidden">
+              <div className="overflow-visible">
                 <motion.h1
                   custom={0}
                   variants={wordVariants}
-                  className="text-[2.2rem] xs:text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold uppercase tracking-tight text-white leading-[0.9] mb-2"
+                  className="text-5xl md:text-5xl lg:text-7xl font-bold uppercase tracking-tight text-white leading-[0.9] mb-2 whitespace-nowrap overflow-visible"
                   style={{ hyphens: "none" }}
                 >
                   ADVANCED
                 </motion.h1>
               </div>
-              <div className="overflow-hidden">
+              <div className="overflow-visible">
                 <motion.h1
                   custom={1}
                   variants={wordVariants}
-                  className="text-[2.2rem] xs:text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold uppercase tracking-tight text-[#29B8E8] leading-[0.9] mb-8"
+                  className="text-5xl md:text-5xl lg:text-7xl font-bold uppercase tracking-tight text-[#29B8E8] leading-[0.9] mb-8 whitespace-nowrap overflow-visible"
                   style={{ hyphens: "none" }}
                 >
                   MANUFACTURING
@@ -133,13 +133,13 @@ export default function Hero() {
               style={{ clipPath: "polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?q=80&w=1200&auto=format&fit=crop"
-                alt="Precision automated cutting machine in a modern factory"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop"
+                alt="Industrial fabric cutting machinery in a garment factory"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="50vw"
               />
-              <div className="absolute inset-0 bg-[#1E6CC8]/20" />
+              <div className="absolute inset-0 bg-[#142250]/40" />
             </div>
             {/* Cyan accent line */}
             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-[#29B8E8] to-transparent" />

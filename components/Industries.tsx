@@ -8,26 +8,23 @@ const industries = [
   {
     name: "APPAREL",
     description:
-      "End-to-end solutions for garment manufacturers — from pattern design to automated cutting and smart factory integration.",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200&auto=format&fit=crop",
-    alt: "Garment factory production floor",
+      "Serving large-scale garment manufacturing, from design to cutting. Supports high-volume production across denim, sportswear, and intimate wear with consistent quality.",
+    image: "/industries/apparel.png",
+    alt: "Apparel garment manufacturing",
   },
   {
     name: "HOME TEXTILES",
     description:
-      "Precision spreading, cutting, and quality inspection systems engineered for bed linen, curtain, and upholstery manufacturers.",
-    image:
-      "https://images.unsplash.com/photo-1585771724684-38269d6639fd?q=80&w=1200&auto=format&fit=crop",
-    alt: "Textile fabric rolls in a warehouse",
+      "Serving the production of curtains, bedding, and upholstery. Handles wide fabrics with accurate cutting and smooth processing.",
+    image: "/industries/home-textiles.png",
+    alt: "Home textile fabric production",
   },
   {
     name: "TECHNICAL & INDUSTRIAL",
     description:
-      "Advanced cutting and inspection systems for technical textiles, composites, leather, and other non-apparel flexible materials.",
-    image:
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=1200&auto=format&fit=crop",
-    alt: "Technical industrial manufacturing equipment",
+      "Serving industries that require high accuracy and safety. Includes aerospace applications such as Boeing and Airbus, along with safety gear, automotive interiors, parachutes, and cargo nets.",
+    image: "/industries/technical.png",
+    alt: "Technical and industrial manufacturing",
   },
 ];
 

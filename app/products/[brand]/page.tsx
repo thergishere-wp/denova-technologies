@@ -112,6 +112,31 @@ export default async function BrandPage({ params }: Props) {
 
         {/* Products grid */}
         <div className="max-w-7xl mx-auto px-6 lg:px-16 py-20">
+          {/* Product groups (e.g. JWEI with two categories) */}
+          {brand.productGroups && brand.productGroups.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              {brand.productGroups.map((group) => (
+                <div key={group.title}>
+                  <h2 className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-6 pb-3 border-b border-white/10">
+                    {group.title}
+                  </h2>
+                  <div className="flex flex-col gap-3">
+                    {group.items.map((p, i) => (
+                      <div
+                        key={p}
+                        className="flex items-center gap-4 bg-[#1B2F68] p-4 border border-white/10 hover:border-[#29B8E8]/40 transition-colors"
+                      >
+                        <span className="text-[#29B8E8] text-sm font-mono w-6 shrink-0">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="text-white font-medium">{p}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             {brand.softwareProducts.length > 0 && (
               <div>
@@ -154,6 +179,7 @@ export default async function BrandPage({ params }: Props) {
               </div>
             )}
           </div>
+          )}
 
           {/* Benefits */}
           <div className="mb-16">

@@ -5,14 +5,8 @@ export interface GalleryImage {
 
 export const galleryImages: Record<string, GalleryImage[]> = {
   docad: [
-    {
-      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=750&fit=crop&auto=format",
-      alt: "DOCAD CAD pattern design workspace",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=750&fit=crop&auto=format",
-      alt: "DOCAD precision pattern workstation",
-    },
+    { src: "/products/docad/docad-1.jpg", alt: "DOCAD CAD software interface" },
+    { src: "/products/docad/docad-2.jpg", alt: "DOCAD CAD/CAM system" },
     {
       src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=750&fit=crop&auto=format",
       alt: "DOCAD apparel marker optimization",
@@ -23,10 +17,7 @@ export const galleryImages: Record<string, GalleryImage[]> = {
     },
   ],
   "ozer-makina": [
-    {
-      src: "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=1200&h=750&fit=crop&auto=format",
-      alt: "Özer Makina automatic spreading machine",
-    },
+    { src: "/products/ozer/ozer-1.png", alt: "Özer Makina automatic spreading machine" },
     {
       src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=750&fit=crop&auto=format",
       alt: "Özer Makina industrial textile production line",
@@ -41,54 +32,24 @@ export const galleryImages: Record<string, GalleryImage[]> = {
     },
   ],
   jingwei: [
-    {
-      src: "https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=1200&h=750&fit=crop&auto=format",
-      alt: "JWEI automated digital cutting table",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=750&fit=crop&auto=format",
-      alt: "JWEI high-speed fabric cutting system",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=750&fit=crop&auto=format",
-      alt: "JWEI precision knife cutting machine",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=1200&h=750&fit=crop&auto=format",
-      alt: "JWEI template cutter production setup",
-    },
+    { src: "/products/jwei/jwei-1.png", alt: "JWEI pattern cutter" },
+    { src: "/products/jwei/jwei-2.png", alt: "JWEI digital cutting system" },
+    { src: "/products/jwei/jwei-3.jpg", alt: "JWEI cutting machine" },
+    { src: "/products/jwei/jwei-multilayer.png", alt: "JWEI multilayer cutting system" },
   ],
   ctex: [
-    {
-      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=750&fit=crop&auto=format",
-      alt: "C-TEX fabric inspection machine",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1200&h=750&fit=crop&auto=format",
-      alt: "C-TEX automated defect detection system",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=750&fit=crop&auto=format",
-      alt: "C-TEX quality control production line",
-    },
+    { src: "/products/ctex/ctex-1.png", alt: "C-TEX fabric inspection machine" },
+    { src: "/products/ctex/ctex-2.png", alt: "C-TEX inspection system" },
+    { src: "/products/ctex/ctex-3.jpg", alt: "C-TEX fabric relaxing machine" },
     {
       src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=750&fit=crop&auto=format",
-      alt: "C-TEX fabric relaxing machine setup",
+      alt: "C-TEX quality control production line",
     },
   ],
   "mu-bigdata": [
-    {
-      src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=750&fit=crop&auto=format",
-      alt: "MU Big Data factory analytics dashboard",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=750&fit=crop&auto=format",
-      alt: "MU Big Data real-time production data visualization",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=750&fit=crop&auto=format",
-      alt: "MU Big Data MES smart factory interface",
-    },
+    { src: "/products/mu/mu-1.webp", alt: "MU Big Data factory software" },
+    { src: "/products/mu/mu-2.webp", alt: "MU MES system" },
+    { src: "/products/mu/mu-3.png", alt: "MU production analytics dashboard" },
     {
       src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=750&fit=crop&auto=format",
       alt: "MU Big Data shop floor tablet U-PAD in use",
