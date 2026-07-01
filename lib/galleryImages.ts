@@ -7,10 +7,6 @@ export const galleryImages: Record<string, GalleryImage[]> = {
   docad: [
     { src: "/products/docad/docad-1.jpg", alt: "DOCAD CAD software interface" },
     { src: "/products/docad/docad-2.jpg", alt: "DOCAD CAD/CAM system" },
-    {
-      src: "https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=1200&h=750&fit=crop&auto=format",
-      alt: "DOCAD automated pattern cutting output",
-    },
   ],
   "ozer-makina": [
     { src: "/products/ozer/ozer-1.png", alt: "Özer Makina automatic spreading machine" },

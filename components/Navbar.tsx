@@ -33,7 +33,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-16 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 xl:px-16 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center group">
           <span className="bg-white px-3 py-1.5 rounded-sm inline-flex items-center">
@@ -49,7 +49,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -67,10 +67,10 @@ export default function Navbar() {
         </div>
 
         {/* CTA */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <a
             href="#contact"
-            className="bg-[#1E6CC8] text-white text-xs font-bold uppercase tracking-widest px-6 py-3 hover:bg-[#29B8E8] transition-colors duration-150 cursor-pointer"
+            className="bg-[#1E6CC8] text-white text-xs font-bold uppercase tracking-widest px-4 xl:px-6 py-3 whitespace-nowrap hover:bg-[#29B8E8] transition-colors duration-150 cursor-pointer"
           >
             Request a Quote
           </a>
@@ -79,7 +79,7 @@ export default function Navbar() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-white p-2 cursor-pointer"
+          className="lg:hidden text-white p-2 cursor-pointer"
           aria-label="Toggle menu"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -101,7 +101,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-[#0d1a3d] border-t border-white/10 px-6 py-6 flex flex-col gap-4">
+        <div className="lg:hidden bg-[#0d1a3d] border-t border-white/10 px-6 py-6 flex flex-col gap-4">
           {navLinks.map((link) => (
             <a
               key={link.label}

@@ -57,7 +57,7 @@ export default function Countries() {
             09 — Global Presence
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
-            Countries We Serve
+            Countries We Are In
           </h2>
           <div className="w-20 h-0.5 bg-[#29B8E8]" />
         </motion.div>

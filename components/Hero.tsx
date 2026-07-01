@@ -44,7 +44,7 @@ export default function Hero() {
                 <motion.h1
                   custom={0}
                   variants={wordVariants}
-                  className="text-[1.85rem] sm:text-5xl lg:text-7xl font-bold uppercase tracking-tight text-white leading-[0.9] mb-2 whitespace-nowrap overflow-visible"
+                  className="text-[1.85rem] sm:text-4xl md:text-5xl xl:text-7xl font-bold uppercase tracking-tight text-white leading-[0.9] mb-2 whitespace-nowrap overflow-visible"
                   style={{ hyphens: "none" }}
                 >
                   ADVANCED
@@ -54,7 +54,7 @@ export default function Hero() {
                 <motion.h1
                   custom={1}
                   variants={wordVariants}
-                  className="text-[1.85rem] sm:text-5xl lg:text-7xl font-bold uppercase tracking-tight text-[#29B8E8] leading-[0.9] mb-8 whitespace-nowrap overflow-visible"
+                  className="text-[1.85rem] sm:text-4xl md:text-5xl xl:text-7xl font-bold uppercase tracking-tight text-[#29B8E8] leading-[0.9] mb-8 whitespace-nowrap overflow-visible"
                   style={{ hyphens: "none" }}
                 >
                   MANUFACTURING
