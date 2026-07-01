@@ -79,20 +79,16 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
+                href="#about"
+                className="border border-white/30 text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-white/10 transition-colors duration-150 text-center cursor-pointer"
+              >
+                Discover DeNova
+              </a>
+              <a
                 href="#solutions"
                 className="bg-[#1E6CC8] text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#29B8E8] transition-colors duration-150 text-center cursor-pointer"
               >
                 Explore Solutions
-              </a>
-              <a
-                href="#about"
-                className="border border-white/30 text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-white/10 transition-colors duration-150 text-center cursor-pointer flex items-center justify-center gap-2"
-              >
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <circle cx="8" cy="8" r="6" stroke="#29B8E8" strokeWidth="1.5" />
-                  <path d="M8 5v3l2 2" stroke="#29B8E8" strokeWidth="1.5" strokeLinecap="round" />
-                </svg>
-                Discover DeNova
               </a>
             </motion.div>
 
