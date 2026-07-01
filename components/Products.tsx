@@ -71,20 +71,24 @@ export default function Products() {
                           {brand.country}
                         </span>
                       )}
-                      <span className="text-[10px] font-mono text-white/30">
-                        Est. {brand.founded}
-                      </span>
+                      {brand.founded && (
+                        <span className="text-[10px] font-mono text-white/30">
+                          Est. {brand.founded}
+                        </span>
+                      )}
                     </div>
                     {/* Brand logo */}
                     <div className="h-10 mb-3 flex items-center">
-                      <Image
-                        src={brandLogoMap[brand.id]}
-                        alt={`${brand.name} logo`}
-                        width={100}
-                        height={40}
-                        className="object-contain object-left"
-                        style={{ filter: "brightness(0) invert(1)", maxHeight: "36px", width: "auto" }}
-                      />
+                      <span className="bg-white px-3 py-1.5 inline-flex items-center">
+                        <Image
+                          src={brandLogoMap[brand.id]}
+                          alt={`${brand.name} logo`}
+                          width={100}
+                          height={36}
+                          className="object-contain"
+                          style={{ maxHeight: "32px", width: "auto" }}
+                        />
+                      </span>
                     </div>
                     <h3 className="text-white font-bold text-xl uppercase tracking-tight">
                       {brand.name}

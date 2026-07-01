@@ -7,8 +7,8 @@ export interface Brand {
   id: string;
   number: string;
   name: string;
-  country: string;
-  founded: number;
+  country?: string;
+  founded?: number;
   description: string;
   category: string;
   softwareProducts: string[];
@@ -89,8 +89,6 @@ export const brands: Brand[] = [
     id: "ctex",
     number: "04",
     name: "C-TEX",
-    country: "",
-    founded: 2000,
     category: "Smart Factory Solutions",
     description:
       "C-TEX delivers advanced fabric inspection and relaxing machines that integrate seamlessly with smart factory systems, ensuring quality at every stage of production.",

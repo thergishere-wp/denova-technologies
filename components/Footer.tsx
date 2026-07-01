@@ -42,15 +42,17 @@ export default function Footer() {
           </div>
           <div className="flex flex-wrap items-center gap-8">
             {brandLogos.map((logo) => (
-              <Link key={logo.alt} href={logo.href} className="opacity-50 hover:opacity-100 transition-opacity duration-150">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={80}
-                  height={40}
-                  className="object-contain"
-                  style={{ filter: "brightness(0) invert(1)", maxHeight: "36px", width: "auto" }}
-                />
+              <Link key={logo.alt} href={logo.href} className="opacity-60 hover:opacity-100 transition-opacity duration-150">
+                <span className="bg-white px-3 py-2 inline-flex items-center">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={80}
+                    height={36}
+                    className="object-contain"
+                    style={{ maxHeight: "32px", width: "auto" }}
+                  />
+                </span>
               </Link>
             ))}
           </div>
@@ -62,15 +64,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand col */}
           <div className="lg:col-span-1">
-            <div className="mb-5">
-              <Image
-                src="/denova-logo.png"
-                alt="DeNova Technologies Ltd"
-                width={160}
-                height={52}
-                style={{ filter: "brightness(0) invert(1)", mixBlendMode: "screen" }}
-                className="object-contain"
-              />
+            <div className="mb-5 inline-flex">
+              <span className="bg-white px-3 py-2 rounded-sm inline-flex items-center">
+                <Image
+                  src="/denova-logo.png"
+                  alt="DeNova Technologies Ltd"
+                  width={140}
+                  height={48}
+                  className="object-contain"
+                />
+              </span>
             </div>
             <p className="text-[#94A3B8] text-sm leading-relaxed mb-6 max-w-xs">
               Advanced manufacturing solutions for the modern industrial landscape.

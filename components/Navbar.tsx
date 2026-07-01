@@ -35,15 +35,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-16 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center group">
-          <Image
-            src="/denova-logo.png"
-            alt="DeNova Technologies Ltd"
-            width={148}
-            height={48}
-            style={{ filter: "brightness(0) invert(1)", mixBlendMode: "screen" }}
-            className="object-contain"
-            priority
-          />
+          <span className="bg-white px-3 py-1.5 rounded-sm inline-flex items-center">
+            <Image
+              src="/denova-logo.png"
+              alt="DeNova Technologies Ltd"
+              width={120}
+              height={40}
+              className="object-contain"
+              priority
+            />
+          </span>
         </Link>
 
         {/* Desktop nav */}

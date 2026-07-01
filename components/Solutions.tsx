@@ -146,19 +146,24 @@ export default function Solutions() {
                     >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1">
-                          <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-2">
-                            {brand.country ? `${brand.country} · ` : ""}Est. {brand.founded}
-                          </div>
+                          {(brand.country || brand.founded) && (
+                            <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-2">
+                              {brand.country ? `${brand.country}${brand.founded ? " · " : ""}` : ""}
+                              {brand.founded ? `Est. ${brand.founded}` : ""}
+                            </div>
+                          )}
                           {/* Brand logo */}
                           <div className="h-8 mb-2 flex items-center">
-                            <Image
-                              src={brandLogoMap[brand.id]}
-                              alt={`${brand.name} logo`}
-                              width={80}
-                              height={32}
-                              className="object-contain object-left"
-                              style={{ filter: "brightness(0) invert(1)", maxHeight: "28px", width: "auto" }}
-                            />
+                            <span className="bg-white px-2 py-1 inline-flex items-center">
+                              <Image
+                                src={brandLogoMap[brand.id]}
+                                alt={`${brand.name} logo`}
+                                width={80}
+                                height={28}
+                                className="object-contain"
+                                style={{ maxHeight: "24px", width: "auto" }}
+                              />
+                            </span>
                           </div>
                           <h4 className="text-white font-bold text-lg uppercase tracking-wide">
                             {brand.name}

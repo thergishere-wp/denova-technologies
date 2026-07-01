@@ -71,21 +71,25 @@ export default async function BrandPage({ params }: Props) {
                       {brand.country}
                     </span>
                   )}
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-white/30">
-                    Est. {brand.founded}
-                  </span>
+                  {brand.founded && (
+                    <span className="text-[10px] font-mono uppercase tracking-widest text-white/30">
+                      Est. {brand.founded}
+                    </span>
+                  )}
                 </div>
                 {/* Brand logo */}
                 <div className="h-12 mb-4 flex items-center">
-                  <Image
-                    src={brandLogoMap[brand.id]}
-                    alt={`${brand.name} logo`}
-                    width={160}
-                    height={48}
-                    className="object-contain object-left"
-                    style={{ filter: "brightness(0) invert(1)", maxHeight: "44px", width: "auto" }}
-                    priority
-                  />
+                  <span className="bg-white px-4 py-2 inline-flex items-center">
+                    <Image
+                      src={brandLogoMap[brand.id]}
+                      alt={`${brand.name} logo`}
+                      width={160}
+                      height={44}
+                      className="object-contain"
+                      style={{ maxHeight: "40px", width: "auto" }}
+                      priority
+                    />
+                  </span>
                 </div>
                 <h1 className="text-6xl font-bold uppercase tracking-tight text-white mb-3">
                   {brand.name}
