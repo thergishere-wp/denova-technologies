@@ -33,18 +33,18 @@ export default function Industries() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="industries" className="py-32 bg-[#142250]" ref={ref}>
+    <section id="industries" className="py-14 sm:py-20 lg:py-32 bg-[#142250]" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-8 sm:mb-12 lg:mb-16"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
             02 — Markets
           </div>
-          <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Industries We Serve
           </h2>
           <div className="w-20 h-0.5 bg-[#29B8E8]" />
@@ -57,7 +57,7 @@ export default function Industries() {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.12, duration: 0.6 }}
-              className="relative group overflow-hidden cursor-default min-h-[400px] flex flex-col justify-end"
+              className="relative group overflow-hidden cursor-default min-h-[260px] sm:min-h-[320px] lg:min-h-[400px] flex flex-col justify-end"
             >
               <Image
                 src={industry.image}
@@ -67,9 +67,9 @@ export default function Industries() {
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#142250] via-[#142250]/60 to-transparent" />
-              <div className="relative z-10 p-8">
-                <div className="w-8 h-0.5 bg-[#29B8E8] mb-4" />
-                <h3 className="text-white font-bold text-2xl uppercase tracking-tight mb-3">
+              <div className="relative z-10 p-6 sm:p-8">
+                <div className="w-8 h-0.5 bg-[#29B8E8] mb-3 sm:mb-4" />
+                <h3 className="text-white font-bold text-xl sm:text-2xl uppercase tracking-tight mb-2 sm:mb-3">
                   {industry.name}
                 </h3>
                 <p className="text-white/60 text-sm leading-relaxed">

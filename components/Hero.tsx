@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-[#142250] overflow-hidden"
+      className="relative min-h-[640px] sm:min-h-screen flex items-center bg-[#142250] overflow-hidden"
     >
       {/* Background image */}
       <div className="absolute inset-0 z-0">
@@ -31,8 +31,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#142250] via-[#142250]/85 to-[#142250]/30" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-16 pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-24">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-16 pt-24 sm:pt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px] sm:min-h-screen py-10 sm:py-16 lg:py-24">
           {/* Left: text */}
           <div className="min-w-0 w-full overflow-visible">
             <motion.div
@@ -44,7 +44,7 @@ export default function Hero() {
                 <motion.h1
                   custom={0}
                   variants={wordVariants}
-                  className="text-5xl md:text-5xl lg:text-7xl font-bold uppercase tracking-tight text-white leading-[0.9] mb-2 whitespace-nowrap overflow-visible"
+                  className="text-[1.85rem] sm:text-5xl lg:text-7xl font-bold uppercase tracking-tight text-white leading-[0.9] mb-2 whitespace-nowrap overflow-visible"
                   style={{ hyphens: "none" }}
                 >
                   ADVANCED
@@ -54,7 +54,7 @@ export default function Hero() {
                 <motion.h1
                   custom={1}
                   variants={wordVariants}
-                  className="text-5xl md:text-5xl lg:text-7xl font-bold uppercase tracking-tight text-[#29B8E8] leading-[0.9] mb-8 whitespace-nowrap overflow-visible"
+                  className="text-[1.85rem] sm:text-5xl lg:text-7xl font-bold uppercase tracking-tight text-[#29B8E8] leading-[0.9] mb-8 whitespace-nowrap overflow-visible"
                   style={{ hyphens: "none" }}
                 >
                   MANUFACTURING
@@ -66,7 +66,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="text-[#94A3B8] text-lg leading-relaxed max-w-lg mb-10"
+              className="text-[#94A3B8] text-base sm:text-lg leading-relaxed max-w-lg mb-6 sm:mb-10"
             >
               Providing cutting-edge machinery and intelligent software systems
               for apparel and non-apparel industries in Sri Lanka &amp; Bangladesh.
@@ -101,7 +101,7 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
-              className="mt-16 flex gap-10 border-t border-white/10 pt-8"
+              className="mt-8 sm:mt-16 flex gap-6 sm:gap-10 border-t border-white/10 pt-6 sm:pt-8"
             >
               {[
                 { value: "25+", label: "Years Experience" },
@@ -152,7 +152,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2"
       >
         <div className="text-[#94A3B8] text-[10px] uppercase tracking-widest">Scroll</div>
         <motion.div

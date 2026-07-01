@@ -68,18 +68,18 @@ export default function Team() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-32 bg-white" ref={ref}>
+    <section className="py-14 sm:py-20 lg:py-32 bg-white" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-8 sm:mb-12 lg:mb-16"
         >
           <div className="text-[#1E6CC8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
             10 — The People
           </div>
-          <h2 className="text-5xl font-bold uppercase tracking-tight text-[#142250] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-[#142250] mb-4">
             Meet Our Team
           </h2>
           <div className="w-20 h-0.5 bg-[#29B8E8]" />
@@ -92,7 +92,7 @@ export default function Team() {
           transition={{ duration: 0.6 }}
           className="bg-[#142250] mb-6 flex flex-col md:flex-row overflow-hidden"
         >
-          <div className="relative w-full md:w-80 h-72 md:h-auto shrink-0 bg-[#E2E8F0]">
+          <div className="relative w-full md:w-80 h-52 sm:h-72 md:h-auto shrink-0 bg-[#E2E8F0]">
             <Image
               src={lead.image}
               alt={`${lead.name} — ${lead.title}`}
@@ -102,14 +102,14 @@ export default function Team() {
               priority
             />
           </div>
-          <div className="p-8 md:p-10 flex flex-col justify-center">
-            <h3 className="text-white font-bold text-2xl md:text-3xl uppercase tracking-wide mb-1">
+          <div className="p-5 sm:p-8 md:p-10 flex flex-col justify-center">
+            <h3 className="text-white font-bold text-xl sm:text-2xl md:text-3xl uppercase tracking-wide mb-1">
               {lead.name}
             </h3>
-            <p className="text-[#29B8E8] text-sm font-bold uppercase tracking-widest mb-6">
+            <p className="text-[#29B8E8] text-sm font-bold uppercase tracking-widest mb-4 sm:mb-6">
               {lead.title}
             </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 sm:gap-y-3">
               {lead.credentials.map((c) => (
                 <li key={c} className="flex items-start gap-2">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 mt-1" aria-hidden="true">
@@ -123,32 +123,32 @@ export default function Team() {
         </motion.div>
 
         {/* Rest of the team — 2×2 grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-6">
           {team.map((member, i) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.15 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="group hover:-translate-y-1 transition-transform duration-150 flex flex-col sm:flex-row bg-[#142250] overflow-hidden"
+              className="group hover:-translate-y-1 transition-transform duration-150 flex flex-row bg-[#142250] overflow-hidden"
             >
-              <div className="relative w-full sm:w-40 h-56 sm:h-auto shrink-0 bg-[#E2E8F0]">
+              <div className="relative w-28 sm:w-40 h-auto shrink-0 bg-[#E2E8F0]">
                 <Image
                   src={member.image}
                   alt={`${member.name} — ${member.title}`}
                   fill
                   className="object-cover object-top transition-all duration-300"
-                  sizes="(max-width: 640px) 100vw, 160px"
+                  sizes="(max-width: 640px) 112px, 160px"
                 />
               </div>
-              <div className="p-6 flex-1">
-                <h3 className="text-white font-bold text-lg uppercase tracking-wide mb-1">
+              <div className="p-4 sm:p-6 flex-1">
+                <h3 className="text-white font-bold text-base sm:text-lg uppercase tracking-wide mb-1">
                   {member.name}
                 </h3>
-                <p className="text-[#29B8E8] text-xs font-bold uppercase tracking-widest mb-4">
+                <p className="text-[#29B8E8] text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-2 sm:mb-4">
                   {member.title}
                 </p>
-                <ul className="flex flex-col gap-2">
+                <ul className="flex flex-col gap-1.5 sm:gap-2">
                   {member.credentials.map((c) => (
                     <li key={c} className="flex items-start gap-2">
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="shrink-0 mt-0.5" aria-hidden="true">

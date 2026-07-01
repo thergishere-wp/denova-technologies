@@ -8,10 +8,6 @@ export const galleryImages: Record<string, GalleryImage[]> = {
     { src: "/products/docad/docad-1.jpg", alt: "DOCAD CAD software interface" },
     { src: "/products/docad/docad-2.jpg", alt: "DOCAD CAD/CAM system" },
     {
-      src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=750&fit=crop&auto=format",
-      alt: "DOCAD apparel marker optimization",
-    },
-    {
       src: "https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=1200&h=750&fit=crop&auto=format",
       alt: "DOCAD automated pattern cutting output",
     },
@@ -26,10 +22,6 @@ export const galleryImages: Record<string, GalleryImage[]> = {
       src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=750&fit=crop&auto=format",
       alt: "Özer Makina fabric spreading system",
     },
-    {
-      src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=750&fit=crop&auto=format",
-      alt: "Özer Makina conveyorized spreading table",
-    },
   ],
   jingwei: [
     { src: "/products/jwei/jwei-1.png", alt: "JWEI pattern cutter" },
@@ -41,10 +33,6 @@ export const galleryImages: Record<string, GalleryImage[]> = {
     { src: "/products/ctex/ctex-1.png", alt: "C-TEX fabric inspection machine" },
     { src: "/products/ctex/ctex-2.png", alt: "C-TEX inspection system" },
     { src: "/products/ctex/ctex-3.jpg", alt: "C-TEX fabric relaxing machine" },
-    {
-      src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&h=750&fit=crop&auto=format",
-      alt: "C-TEX quality control production line",
-    },
   ],
   "mu-bigdata": [
     { src: "/products/mu/mu-1.webp", alt: "MU Big Data factory software" },

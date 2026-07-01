@@ -74,31 +74,31 @@ export default function WhyUs() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-32 bg-[#F0F4FF]" ref={ref}>
+    <section className="py-14 sm:py-20 lg:py-32 bg-[#F0F4FF]" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16 text-center"
+          className="mb-8 sm:mb-12 lg:mb-16 text-center"
         >
           <div className="text-[#1E6CC8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
             05 — Our Edge
           </div>
-          <h2 className="text-5xl font-bold uppercase tracking-tight text-[#142250] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-[#142250] mb-4">
             Why Partner With Us
           </h2>
           <div className="w-20 h-0.5 bg-[#29B8E8] mx-auto" />
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#142250]/10">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-px bg-[#142250]/10">
           {differentiators.map((d, i) => (
             <motion.div
               key={d.heading}
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="bg-white p-8 hover:bg-[#F0F4FF] transition-colors duration-150 group cursor-default"
+              className="bg-white p-5 sm:p-8 hover:bg-[#F0F4FF] transition-colors duration-150 group cursor-default"
             >
               <div className="mb-4 group-hover:scale-110 transition-transform duration-150 w-fit">
                 {d.icon}

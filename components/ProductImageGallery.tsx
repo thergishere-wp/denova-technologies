@@ -29,9 +29,9 @@ export default function ProductImageGallery({ images, brandName }: ProductImageG
   const visibleThumbs = images.slice(0, 4);
 
   return (
-    <section className="bg-[#0d1a3d] py-16">
+    <section className="bg-[#0d1a3d] py-8 sm:py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
-        <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-6">
+        <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-4 sm:mb-6">
           {brandName} — Product Gallery
         </div>
 

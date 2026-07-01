@@ -73,7 +73,7 @@ export default function SoftwareDevelopment() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-32 bg-[#0d1a3d]" ref={ref}>
+    <section className="py-14 sm:py-20 lg:py-32 bg-[#0d1a3d]" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -84,7 +84,7 @@ export default function SoftwareDevelopment() {
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
             08 — Software Development
           </div>
-          <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Software Development Solutions
           </h2>
           <div className="w-20 h-0.5 bg-[#29B8E8] mb-6" />
@@ -112,7 +112,7 @@ export default function SoftwareDevelopment() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.1 + i * 0.1, duration: 0.5 }}
-              className="bg-[#1B2F68] border-t-2 border-t-[#29B8E8] p-7"
+              className="bg-[#1B2F68] border-t-2 border-t-[#29B8E8] p-5 sm:p-7"
             >
               <div className="flex items-start gap-3 mb-5">
                 <span className="text-[#29B8E8] text-sm font-mono font-bold shrink-0">
@@ -137,15 +137,15 @@ export default function SoftwareDevelopment() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="bg-[#142250] border border-[#29B8E8]/30 p-8"
+          className="bg-[#142250] border border-[#29B8E8]/30 p-5 sm:p-8"
         >
-          <div className="flex items-start gap-3 mb-6">
+          <div className="flex items-start gap-3 mb-4 sm:mb-6">
             <span className="text-[#29B8E8] text-sm font-mono font-bold shrink-0">05</span>
             <h3 className="text-white font-bold text-lg leading-snug">
               Custom Software Development
             </h3>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-3">
+          <div className="grid grid-cols-2 gap-x-4 sm:gap-x-10 gap-y-3">
             {customAreas.map((area) => (
               <div key={area} className="flex items-center gap-3">
                 <CheckIcon />

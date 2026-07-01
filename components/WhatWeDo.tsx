@@ -37,9 +37,9 @@ export default function WhatWeDo() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-32 bg-[#F0F4FF]" ref={ref}>
+    <section id="about" className="py-14 sm:py-20 lg:py-32 bg-[#F0F4FF]" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Left */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -49,10 +49,10 @@ export default function WhatWeDo() {
             <div className="text-[#1E6CC8] text-xs font-mono uppercase tracking-[0.25em] mb-4">
               01 — Who We Are
             </div>
-            <div className="text-[120px] font-bold text-[#1E6CC8]/10 leading-none select-none -mt-4 mb-2">
+            <div className="hidden sm:block text-[80px] lg:text-[120px] font-bold text-[#1E6CC8]/10 leading-none select-none -mt-4 mb-2">
               01
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold uppercase tracking-tight text-[#142250] leading-tight mb-6 border-l-4 border-[#29B8E8] pl-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-[#142250] leading-tight mb-4 sm:mb-6 border-l-4 border-[#29B8E8] pl-4 sm:pl-6">
               A Technology Partner for Modern Manufacturing
             </h2>
             <p className="text-[#475569] text-base leading-relaxed mb-4">
@@ -79,7 +79,7 @@ export default function WhatWeDo() {
                 initial={{ opacity: 0, x: 60 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.2 + i * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="bg-[#1B2F68] p-8 border-l-4 hover:border-l-[#29B8E8] transition-all duration-150 cursor-default group"
+                className="bg-[#1B2F68] p-5 sm:p-8 border-l-4 hover:border-l-[#29B8E8] transition-all duration-150 cursor-default group"
                 style={{ borderLeftColor: card.borderColor }}
               >
                 <div className="flex items-center gap-3 mb-4">

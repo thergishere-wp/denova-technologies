@@ -53,7 +53,7 @@ export default function TrustBar() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="bg-[#1E6CC8] border-y border-white/10 py-10" ref={ref}>
+    <section className="bg-[#1E6CC8] border-y border-white/10 py-4 sm:py-10" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-0">
           {items.map((item, i) => (
@@ -62,16 +62,16 @@ export default function TrustBar() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className={`flex items-center gap-4 py-6 px-6 ${
+              className={`flex items-center gap-2 sm:gap-4 py-3 px-3 sm:py-6 sm:px-6 ${
                 i < items.length - 1 ? "border-r border-white/20" : ""
               }`}
             >
-              <div className="shrink-0">{item.icon}</div>
+              <div className="shrink-0 scale-75 sm:scale-100">{item.icon}</div>
               <div>
-                <div className="text-white font-bold text-sm uppercase tracking-wide leading-tight">
+                <div className="text-white font-bold text-[11px] sm:text-sm uppercase tracking-wide leading-tight">
                   {item.heading}
                 </div>
-                <div className="text-white/60 text-xs mt-1">{item.sub}</div>
+                <div className="text-white/60 text-[10px] sm:text-xs mt-0.5 sm:mt-1 hidden sm:block">{item.sub}</div>
               </div>
             </motion.div>
           ))}

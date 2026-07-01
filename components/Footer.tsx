@@ -36,11 +36,11 @@ export default function Footer() {
     <footer className="bg-[#0d1a3d] border-t-2 border-[#29B8E8]">
       {/* Brand logos bar */}
       <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-8">
-          <div className="text-[#94A3B8] text-[10px] font-mono uppercase tracking-widest mb-6">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-5 sm:py-8">
+          <div className="text-[#94A3B8] text-[10px] font-mono uppercase tracking-widest mb-4 sm:mb-6">
             Authorized Distributors
           </div>
-          <div className="flex flex-wrap items-center gap-8">
+          <div className="flex flex-wrap items-center gap-4 sm:gap-8">
             {brandLogos.map((logo) => (
               <Link key={logo.alt} href={logo.href} className="opacity-60 hover:opacity-100 transition-opacity duration-150">
                 <span className="bg-white px-3 py-2 inline-flex items-center">
@@ -60,10 +60,10 @@ export default function Footer() {
       </div>
 
       {/* Main grid */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 py-10 sm:py-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 sm:gap-12">
           {/* Brand col */}
-          <div className="lg:col-span-1">
+          <div className="col-span-2 lg:col-span-1">
             <div className="mb-5 inline-flex">
               <span className="bg-white px-3 py-2 rounded-sm inline-flex items-center">
                 <Image

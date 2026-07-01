@@ -45,18 +45,18 @@ export default function Countries() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-32 bg-[#0d1a3d]" ref={ref}>
+    <section className="py-14 sm:py-20 lg:py-32 bg-[#0d1a3d]" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-8 sm:mb-12 lg:mb-16"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
             09 — Global Presence
           </div>
-          <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Countries We Serve
           </h2>
           <div className="w-20 h-0.5 bg-[#29B8E8]" />
@@ -67,13 +67,13 @@ export default function Countries() {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : {}}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="mb-16"
+          className="mb-8 sm:mb-12 lg:mb-16"
         >
           <WorldMap />
         </motion.div>
 
         {/* Country cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
           {countries.map((country, i) => {
             const FlagComponent = FlagMap[country.name];
             return (
@@ -82,7 +82,7 @@ export default function Countries() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
-                className="bg-[#1B2F68] p-6"
+                className="bg-[#1B2F68] p-4 sm:p-6"
               >
                 <div className="mb-3">
                   {FlagComponent && (

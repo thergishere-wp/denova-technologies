@@ -58,7 +58,7 @@ function ProductModal({ brand, onClose }: { brand: Brand; onClose: () => void })
         className="bg-[#0d1a3d] border border-white/10 w-full max-w-5xl max-h-[90vh] overflow-y-auto grid grid-cols-1 md:grid-cols-2"
       >
         {/* Left: rotating images */}
-        <div className="relative h-64 md:h-auto bg-[#142250]">
+        <div className="relative h-48 sm:h-64 md:h-auto bg-[#142250]">
           {images.length > 0 ? (
             <ImageRotator images={images} sizes="(max-width: 768px) 100vw, 50vw" priority />
           ) : (
@@ -69,11 +69,11 @@ function ProductModal({ brand, onClose }: { brand: Brand; onClose: () => void })
         </div>
 
         {/* Right: details */}
-        <div className="p-8 md:p-10 relative">
+        <div className="p-5 sm:p-8 md:p-10 relative">
           <button
             onClick={onClose}
             aria-label="Close"
-            className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors cursor-pointer"
+            className="absolute top-2 right-2 sm:top-4 sm:right-4 p-3 text-white/50 hover:text-white transition-colors cursor-pointer"
           >
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
               <line x1="5" y1="5" x2="17" y2="17" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -194,18 +194,18 @@ export default function Products() {
   const modalBrand = brands.find((b) => b.id === activeBrand) ?? null;
 
   return (
-    <section id="products" className="py-32 bg-[#0d1a3d]" ref={ref}>
+    <section id="products" className="py-14 sm:py-20 lg:py-32 bg-[#0d1a3d]" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-8 sm:mb-12 lg:mb-16"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
             04 — Our Brands
           </div>
-          <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Our Products
           </h2>
           <div className="w-20 h-0.5 bg-[#29B8E8]" />
@@ -233,7 +233,7 @@ export default function Products() {
               className="text-left bg-[#1B2F68] border border-white/10 border-t-2 hover:border-t-[#29B8E8] hover:-translate-y-1 transition-all duration-150 cursor-pointer group flex flex-col overflow-hidden focus:outline-none focus-visible:ring-1 focus-visible:ring-[#29B8E8]"
               style={{ borderTopColor: brand.accentColor }}
             >
-              <div className="relative h-48 bg-[#142250]">
+              <div className="relative h-36 sm:h-48 bg-[#142250]">
                 {(galleryImages[brand.id] ?? []).length > 0 ? (
                   <ImageRotator
                     images={galleryImages[brand.id]}
@@ -243,7 +243,7 @@ export default function Products() {
                 ) : null}
               </div>
 
-              <div className="p-6 flex-1 flex flex-col">
+              <div className="p-4 sm:p-6 flex-1 flex flex-col">
                 <div className="flex items-center justify-between mb-4">
                   <span className="h-8 flex items-center">
                     <span className="bg-white px-2.5 py-1 inline-flex items-center">

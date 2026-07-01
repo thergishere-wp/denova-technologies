@@ -46,19 +46,19 @@ export default async function BrandPage({ params }: Props) {
       <Navbar />
       <main className="min-h-screen bg-[#0d1a3d]">
         {/* Hero */}
-        <div className="bg-[#142250] pt-32 pb-20 border-b border-white/10">
+        <div className="bg-[#142250] pt-24 pb-10 sm:pt-32 sm:pb-20 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6 lg:px-16">
             <Link
               href="/#products"
-              className="inline-flex items-center gap-2 text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-8 hover:gap-3 transition-all"
+              className="inline-flex items-center gap-2 text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-5 sm:mb-8 hover:gap-3 transition-all"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M13 8H3M7 4l-4 4 4 4" stroke="#29B8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               Back to Products
             </Link>
-            <div className="flex items-start gap-6 mb-6">
-              <div className="text-8xl font-bold text-white/5 font-mono leading-none select-none">
+            <div className="flex items-start gap-3 sm:gap-6 mb-4 sm:mb-6">
+              <div className="hidden sm:block text-6xl lg:text-8xl font-bold text-white/5 font-mono leading-none select-none">
                 {brand.number}
               </div>
               <div>
@@ -78,7 +78,7 @@ export default async function BrandPage({ params }: Props) {
                   )}
                 </div>
                 {/* Brand logo */}
-                <div className="h-12 mb-4 flex items-center">
+                <div className="h-10 sm:h-12 mb-3 sm:mb-4 flex items-center">
                   <span className="bg-white px-4 py-2 inline-flex items-center">
                     <Image
                       src={brandLogoMap[brand.id]}
@@ -91,7 +91,7 @@ export default async function BrandPage({ params }: Props) {
                     />
                   </span>
                 </div>
-                <h1 className="text-6xl font-bold uppercase tracking-tight text-white mb-3">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white mb-3">
                   {brand.name}
                 </h1>
                 <p className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest">
@@ -99,7 +99,7 @@ export default async function BrandPage({ params }: Props) {
                 </p>
               </div>
             </div>
-            <p className="text-[#94A3B8] text-lg leading-relaxed max-w-3xl">
+            <p className="text-[#94A3B8] text-base sm:text-lg leading-relaxed max-w-3xl">
               {brand.description}
             </p>
           </div>
@@ -111,10 +111,10 @@ export default async function BrandPage({ params }: Props) {
         )}
 
         {/* Products grid */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-16 py-10 sm:py-20">
           {/* Product groups (e.g. JWEI with two categories) */}
           {brand.productGroups && brand.productGroups.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-10 sm:mb-16">
               {brand.productGroups.map((group) => (
                 <div key={group.title}>
                   <h2 className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-6 pb-3 border-b border-white/10">
@@ -137,7 +137,7 @@ export default async function BrandPage({ params }: Props) {
               ))}
             </div>
           ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-10 sm:mb-16">
             {brand.softwareProducts.length > 0 && (
               <div>
                 <h2 className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-6 pb-3 border-b border-white/10">
@@ -182,11 +182,11 @@ export default async function BrandPage({ params }: Props) {
           )}
 
           {/* Benefits */}
-          <div className="mb-16">
-            <h2 className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-6 pb-3 border-b border-white/10">
+          <div className="mb-10 sm:mb-16">
+            <h2 className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-4 sm:mb-6 pb-3 border-b border-white/10">
               Key Benefits
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {brand.benefits.map((benefit) => (
                 <div
                   key={benefit}
@@ -203,21 +203,21 @@ export default async function BrandPage({ params }: Props) {
           </div>
 
           {/* CTA */}
-          <div id="product-cta" className="bg-[#1B2F68] border-t-2 border-t-[#29B8E8] p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <div id="product-cta" className="bg-[#1B2F68] border-t-2 border-t-[#29B8E8] p-6 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
             <div>
-              <h3 className="text-white font-bold text-2xl uppercase tracking-tight mb-2">
+              <h3 className="text-white font-bold text-xl sm:text-2xl uppercase tracking-tight mb-2">
                 Interested in {brand.name}?
               </h3>
               <p className="text-[#94A3B8] text-sm">
                 Contact our team for a demo, pricing, or technical specifications.
               </p>
             </div>
-            <a
+            <Link
               href="/#contact"
               className="bg-[#1E6CC8] text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#29B8E8] transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer"
             >
               Request a Quote for {brand.name}
-            </a>
+            </Link>
           </div>
         </div>
       </main>

@@ -59,7 +59,7 @@ export default function ImageRotator({
       </AnimatePresence>
 
       {showDots && images.length > 1 && (
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 flex items-center gap-1.5">
+        <div className="absolute bottom-1 left-1/2 -translate-x-1/2 z-10 flex items-center">
           {images.map((img, i) => (
             <button
               key={img.src}
@@ -68,10 +68,14 @@ export default function ImageRotator({
                 setIndex(i);
               }}
               aria-label={`Show image ${i + 1}`}
-              className={`h-1.5 rounded-none transition-all duration-200 cursor-pointer ${
-                i === index ? "w-5 bg-[#29B8E8]" : "w-1.5 bg-white/50 hover:bg-white/80"
-              }`}
-            />
+              className="p-2.5 cursor-pointer flex items-center justify-center"
+            >
+              <span
+                className={`block h-1.5 rounded-none transition-all duration-200 ${
+                  i === index ? "w-5 bg-[#29B8E8]" : "w-1.5 bg-white/50 hover:bg-white/80"
+                }`}
+              />
+            </button>
           ))}
         </div>
       )}

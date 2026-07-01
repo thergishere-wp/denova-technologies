@@ -63,25 +63,25 @@ export default function Solutions() {
     : [];
 
   return (
-    <section id="solutions" className="py-32 bg-[#142250]" ref={ref}>
+    <section id="solutions" className="py-14 sm:py-20 lg:py-32 bg-[#142250]" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-8 sm:mb-12 lg:mb-16"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
             03 — What We Offer
           </div>
-          <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Our Solutions
           </h2>
           <div className="w-20 h-0.5 bg-[#29B8E8]" />
         </motion.div>
 
         {/* 2×2 grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/10">
+        <div className="grid grid-cols-2 gap-px bg-white/10">
           {solutions.map((sol, i) => {
             const isActive = activeId === sol.id;
             return (
@@ -91,23 +91,23 @@ export default function Solutions() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.1 + i * 0.08, duration: 0.5 }}
                 onClick={() => setActiveId(isActive ? null : sol.id)}
-                className={`group flex flex-col items-center justify-center gap-5 p-12 text-center transition-all duration-150 cursor-pointer min-h-[220px] ${
+                className={`group flex flex-col items-center justify-center gap-2 sm:gap-5 p-4 sm:p-12 text-center transition-all duration-150 cursor-pointer min-h-[150px] sm:min-h-[220px] ${
                   isActive
                     ? "bg-[#1E6CC8] border-t-2 border-t-[#29B8E8]"
                     : "bg-[#1B2F68] hover:bg-[#1E3A8A] border-t-2 border-t-transparent hover:border-t-[#29B8E8]"
                 }`}
                 aria-expanded={isActive}
               >
-                <div className={`transition-transform duration-150 ${isActive ? "scale-110" : "group-hover:scale-110"}`}>
+                <div className={`scale-75 sm:scale-100 transition-transform duration-150 ${isActive ? "sm:scale-110" : "group-hover:scale-110"}`}>
                   {icons[sol.icon]}
                 </div>
                 <div>
-                  <h3 className="text-white font-bold uppercase tracking-wide text-sm leading-snug mb-2">
+                  <h3 className="text-white font-bold uppercase tracking-wide text-xs sm:text-sm leading-snug mb-1 sm:mb-2">
                     {sol.title}
                   </h3>
-                  <p className="text-white/50 text-xs leading-relaxed">{sol.description}</p>
+                  <p className="hidden sm:block text-white/50 text-xs leading-relaxed">{sol.description}</p>
                 </div>
-                <div className="flex items-center gap-1 text-[#29B8E8] text-xs font-mono uppercase tracking-wider">
+                <div className="flex items-center gap-1 text-[#29B8E8] text-[10px] sm:text-xs font-mono uppercase tracking-wider">
                   View Products
                   <motion.svg
                     width="14" height="14" viewBox="0 0 14 14" fill="none"
@@ -134,15 +134,15 @@ export default function Solutions() {
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
               className="overflow-hidden"
             >
-              <div className="bg-[#0d1a3d] border border-white/10 border-t-2 border-t-[#29B8E8] p-8 mt-px">
-                <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-6">
+              <div className="bg-[#0d1a3d] border border-white/10 border-t-2 border-t-[#29B8E8] p-4 sm:p-8 mt-px">
+                <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-4 sm:mb-6">
                   {activeSolution?.title} — Product Brands
                 </div>
-                <div className={`grid gap-6 ${activeBrands.length === 1 ? "grid-cols-1 max-w-md" : "grid-cols-1 sm:grid-cols-2"}`}>
+                <div className={`grid gap-4 sm:gap-6 ${activeBrands.length === 1 ? "grid-cols-1 max-w-md" : "grid-cols-1 sm:grid-cols-2"}`}>
                   {activeBrands.map((brand) => (
                     <div
                       key={brand.id}
-                      className="bg-[#1B2F68] border border-white/10 p-6 hover:border-[#29B8E8]/50 transition-colors"
+                      className="bg-[#1B2F68] border border-white/10 p-4 sm:p-6 hover:border-[#29B8E8]/50 transition-colors"
                     >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex-1">

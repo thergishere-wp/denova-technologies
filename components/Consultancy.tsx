@@ -31,7 +31,7 @@ export default function Consultancy() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="services" className="py-32 bg-[#0d1a3d]" ref={ref}>
+    <section id="services" className="py-14 sm:py-20 lg:py-32 bg-[#0d1a3d]" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,7 +42,7 @@ export default function Consultancy() {
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
             06 — Services
           </div>
-          <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Apparel Factory Consultancy
           </h2>
           <div className="w-20 h-0.5 bg-[#29B8E8] mb-6" />
@@ -61,17 +61,17 @@ export default function Consultancy() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mb-14"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 mt-6 sm:mt-10 mb-8 sm:mb-14"
         >
           {consultancyAreas.map((area, i) => (
             <div
               key={area}
-              className="flex items-start gap-4 bg-[#142250] border border-white/10 p-5 hover:border-[#29B8E8]/40 transition-colors"
+              className="flex items-start gap-2 sm:gap-4 bg-[#142250] border border-white/10 p-3 sm:p-5 hover:border-[#29B8E8]/40 transition-colors"
             >
-              <span className="text-[#29B8E8] text-sm font-mono font-bold shrink-0 mt-0.5 w-6">
+              <span className="text-[#29B8E8] text-xs sm:text-sm font-mono font-bold shrink-0 mt-0.5 w-5 sm:w-6">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <span className="text-white font-semibold text-sm leading-snug">{area}</span>
+              <span className="text-white font-semibold text-xs sm:text-sm leading-snug">{area}</span>
             </div>
           ))}
         </motion.div>
@@ -81,9 +81,9 @@ export default function Consultancy() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="bg-[#142250] border border-[#29B8E8]/30 p-8"
+          className="bg-[#142250] border border-[#29B8E8]/30 p-5 sm:p-8"
         >
-          <p className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-5">
+          <p className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-4 sm:mb-5">
             Our Objectives
           </p>
           <div className="flex flex-wrap gap-x-10 gap-y-4">

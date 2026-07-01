@@ -43,7 +43,7 @@ export default function MachineryServices() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-32 bg-[#142250]" ref={ref}>
+    <section className="py-14 sm:py-20 lg:py-32 bg-[#142250]" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ export default function MachineryServices() {
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
             07 — Machinery Services
           </div>
-          <h2 className="text-5xl font-bold uppercase tracking-tight text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Machinery Services &amp; Spare Parts
           </h2>
           <div className="w-20 h-0.5 bg-[#29B8E8] mb-6" />
@@ -81,7 +81,7 @@ export default function MachineryServices() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.1 + i * 0.1, duration: 0.5 }}
-              className="bg-[#1B2F68] border-t-2 border-t-[#29B8E8] p-7"
+              className="bg-[#1B2F68] border-t-2 border-t-[#29B8E8] p-5 sm:p-7"
             >
               <h3 className="text-white font-bold text-lg mb-5 leading-snug">{card.title}</h3>
               <ul className="flex flex-col gap-3">
@@ -116,7 +116,7 @@ export default function MachineryServices() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="bg-[#0d1a3d] border border-[#29B8E8]/30 p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+          className="bg-[#0d1a3d] border border-[#29B8E8]/30 p-5 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6"
         >
           <div>
             <p className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-3">
