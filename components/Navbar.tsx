@@ -3,21 +3,23 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
+  { label: "About Us", href: "#about" },
   { label: "Industries", href: "#industries" },
   { label: "Solutions", href: "#solutions" },
   { label: "Products", href: "#products" },
   { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState("");
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -35,18 +37,40 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 xl:px-16 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center group">
-          <span className="bg-white px-3 py-1.5 rounded-sm inline-flex items-center">
-            <Image
-              src="/denova-logo.png"
-              alt="DeNova Technologies Ltd"
-              width={120}
-              height={40}
-              className="object-contain"
-              priority
-            />
-          </span>
-        </Link>
+        {isHome ? (
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              setActive("");
+            }}
+            className="flex items-center group cursor-pointer"
+            aria-label="Scroll to top"
+          >
+            <span className="bg-white px-3 py-1.5 rounded-sm inline-flex items-center">
+              <Image
+                src="/denova-logo.png"
+                alt="DeNova Technologies Ltd"
+                width={120}
+                height={40}
+                className="object-contain"
+                priority
+              />
+            </span>
+          </button>
+        ) : (
+          <Link href="/" className="flex items-center group">
+            <span className="bg-white px-3 py-1.5 rounded-sm inline-flex items-center">
+              <Image
+                src="/denova-logo.png"
+                alt="DeNova Technologies Ltd"
+                width={120}
+                height={40}
+                className="object-contain"
+                priority
+              />
+            </span>
+          </Link>
+        )}
 
         {/* Desktop nav */}
         <div className="hidden lg:flex items-center gap-6 xl:gap-8">
