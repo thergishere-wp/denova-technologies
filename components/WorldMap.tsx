@@ -5,10 +5,10 @@ import { ComposableMap, Geographies, Geography, Marker } from "react-simple-maps
 import { motion } from "framer-motion";
 
 const markers = [
-  { name: "Bangladesh", coordinates: [90.3563, 23.685] as [number, number], phone: "+880 1817-079822" },
   { name: "Sri Lanka", coordinates: [80.7718, 7.8731] as [number, number], phone: "+94 777 395884" },
-  { name: "New Zealand", coordinates: [174.7762, -36.8485] as [number, number], phone: "+64 27 5555880" },
+  { name: "Bangladesh", coordinates: [90.3563, 23.685] as [number, number], phone: "+880 1817-079822" },
   { name: "Kenya", coordinates: [36.8219, -1.2921] as [number, number], phone: "" },
+  { name: "New Zealand", coordinates: [174.7762, -36.8485] as [number, number], phone: "+64 27 5555880" },
 ];
 
 export default function WorldMap() {

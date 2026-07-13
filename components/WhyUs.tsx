@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const differentiators = [
   {
@@ -65,7 +66,7 @@ const differentiators = [
       </svg>
     ),
     heading: "Present in 4 Countries",
-    body: "Active offices in Sri Lanka, Bangladesh, New Zealand, and Kenya — a growing global footprint.",
+    body: "Active offices in Sri Lanka, Bangladesh, Kenya, and New Zealand — a growing global footprint.",
   },
 ];
 
@@ -82,6 +83,18 @@ export default function WhyUs() {
           transition={{ duration: 0.6 }}
           className="mb-8 sm:mb-12 lg:mb-16 text-center"
         >
+          <div className="flex justify-center mb-4">
+            <span className="bg-white border border-[#142250]/10 px-3 py-1.5 inline-flex items-center">
+              <Image
+                src="/denova-logo.png"
+                alt="DeNova Technologies Ltd"
+                width={100}
+                height={32}
+                className="object-contain"
+                style={{ maxHeight: "24px", width: "auto" }}
+              />
+            </span>
+          </div>
           <div className="text-[#1E6CC8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
             05 — Our Edge
           </div>

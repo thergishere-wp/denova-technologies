@@ -77,7 +77,7 @@ export default function Footer() {
             </div>
             <p className="text-[#94A3B8] text-sm leading-relaxed mb-6 max-w-xs">
               Advanced manufacturing solutions for the modern industrial landscape.
-              Sri Lanka · Bangladesh · New Zealand · Kenya.
+              Sri Lanka · Bangladesh · Kenya · New Zealand.
             </p>
             <div className="flex flex-col gap-2">
               <a href="mailto:sales@denovatec.com" className="text-[#94A3B8] text-xs hover:text-[#29B8E8] transition-colors font-mono">
@@ -142,8 +142,8 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-4">
               {[
-                { country: "Bangladesh", phone: "+880 1817-079822" },
                 { country: "Sri Lanka", phone: "+94 777 395884" },
+                { country: "Bangladesh", phone: "+880 1817-079822" },
                 { country: "New Zealand", phone: "+64 27 5555880" },
               ].map((c) => (
                 <div key={c.country}>

@@ -22,7 +22,7 @@ const industries = [
   {
     name: "TECHNICAL & INDUSTRIAL",
     description:
-      "Serving industries that require high accuracy and safety. Includes aerospace applications such as Boeing and Airbus, along with safety gear, automotive interiors, parachutes, and cargo nets.",
+      "Serving industries that require high accuracy and safety. Includes aerospace applications such as Boeing and Airbus, along with products like safety gear, automotive interiors, parachutes, cargo nets, fire covers, and recreational paragliding kites.",
     image: "/industries/technical.png",
     alt: "Technical and industrial manufacturing",
   },

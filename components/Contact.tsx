@@ -5,12 +5,12 @@ import { useRef, useState } from "react";
 
 const offices = [
   {
-    country: "Bangladesh",
-    phone: "+880 1817-079822",
-  },
-  {
     country: "Sri Lanka",
     phone: "+94 777 395884",
+  },
+  {
+    country: "Bangladesh",
+    phone: "+880 1817-079822",
   },
   {
     country: "New Zealand",
@@ -19,7 +19,7 @@ const offices = [
 ];
 
 const countries = [
-  "Bangladesh", "Sri Lanka", "New Zealand", "Kenya", "India",
+  "Sri Lanka", "Bangladesh", "Kenya", "New Zealand", "India",
   "Pakistan", "Vietnam", "Cambodia", "Indonesia", "Other",
 ];
 

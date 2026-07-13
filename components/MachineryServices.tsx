@@ -3,6 +3,14 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+const sparePartsCategories = [
+  "Automatic Fabric Spreaders",
+  "Automatic Cutting Machines",
+  "Plotters & Pattern Cutters",
+  "Fabric Inspection Machines",
+  "Fabric Relaxing Machines",
+];
+
 const serviceCards = [
   {
     title: "Machinery Installation & Commissioning",
@@ -126,6 +134,16 @@ export default function MachineryServices() {
               We supply genuine and authenticated spare parts for most leading cutting room machinery
               brands — ensuring maximum machine uptime and extended equipment life.
             </p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              {sparePartsCategories.map((category) => (
+                <span
+                  key={category}
+                  className="text-[10px] font-mono uppercase tracking-wider bg-[#1B2F68] border border-[#29B8E8]/30 text-[#29B8E8] px-3 py-1.5"
+                >
+                  {category}
+                </span>
+              ))}
+            </div>
           </div>
           <a
             href="#contact"

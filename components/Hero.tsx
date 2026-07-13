@@ -143,6 +143,25 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* DeNova logo watermark badge */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2 }}
+        className="hidden sm:block absolute bottom-8 right-8 z-10"
+      >
+        <span className="bg-white/90 px-3 py-1.5 inline-flex items-center opacity-70 hover:opacity-100 transition-opacity duration-150">
+          <Image
+            src="/denova-logo.png"
+            alt="DeNova Technologies Ltd"
+            width={93}
+            height={30}
+            className="object-contain"
+            style={{ maxHeight: "22px", width: "auto" }}
+          />
+        </span>
+      </motion.div>
+
       {/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}

@@ -65,7 +65,7 @@ export const brands: Brand[] = [
     hardwareProducts: [
       "Automatic Spreading Machine",
       "Air Floatation Spreading Tables",
-      "Conveyorize Spreading Table",
+      "Conveyorized Spreading Table",
       "Fabric Loaders",
     ],
     benefits: [

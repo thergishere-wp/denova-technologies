@@ -19,24 +19,24 @@ const FlagMap: Record<string, React.ComponentType<{ title?: string; className?: 
 
 const countries = [
   {
-    name: "Bangladesh",
-    market: "Primary apparel manufacturing hub — one of the world's largest RMG export sectors.",
-    phone: "+880 1817-079822",
-  },
-  {
     name: "Sri Lanka",
     market: "High-value apparel production with focus on quality, compliance, and innovation.",
     phone: "+94 777 395884",
   },
   {
-    name: "New Zealand",
-    market: "HQ for global operations, strategy, and brand partnerships.",
-    phone: "+64 27 5555880",
+    name: "Bangladesh",
+    market: "Primary apparel manufacturing hub — one of the world's largest RMG export sectors.",
+    phone: "+880 1817-079822",
   },
   {
     name: "Kenya",
     market: "Emerging African apparel market with growing EPZ manufacturing sector.",
     phone: "",
+  },
+  {
+    name: "New Zealand",
+    market: "HQ for global operations, strategy, and brand partnerships.",
+    phone: "+64 27 5555880",
   },
 ];
 

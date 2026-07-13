@@ -1,12 +1,14 @@
 import { notFound } from "next/navigation";
 import { brands } from "@/lib/brands";
 import { galleryImages } from "@/lib/galleryImages";
+import { subProducts } from "@/lib/subProducts";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductImageGallery from "@/components/ProductImageGallery";
+import SubProductCard from "@/components/SubProductCard";
 
 interface Props {
   params: Promise<{ brand: string }>;
@@ -77,19 +79,38 @@ export default async function BrandPage({ params }: Props) {
                     </span>
                   )}
                 </div>
-                {/* Brand logo */}
-                <div className="h-10 sm:h-12 mb-3 sm:mb-4 flex items-center">
-                  <span className="bg-white px-4 py-2 inline-flex items-center">
-                    <Image
-                      src={brandLogoMap[brand.id]}
-                      alt={`${brand.name} logo`}
-                      width={160}
-                      height={44}
-                      className="object-contain"
-                      style={{ maxHeight: "40px", width: "auto" }}
-                      priority
-                    />
-                  </span>
+                {/* DeNova logo + brand logo — authorized distributor pairing */}
+                <div className="mb-3 sm:mb-4">
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="bg-white px-3 py-2 inline-flex items-center h-10 sm:h-12">
+                      <Image
+                        src="/denova-logo.png"
+                        alt="DeNova Technologies Ltd logo"
+                        width={124}
+                        height={40}
+                        className="object-contain"
+                        style={{ maxHeight: "36px", width: "auto" }}
+                        priority
+                      />
+                    </span>
+                    <span className="text-white/30 text-lg font-mono select-none" aria-hidden="true">
+                      ×
+                    </span>
+                    <span className="bg-white px-4 py-2 inline-flex items-center h-10 sm:h-12">
+                      <Image
+                        src={brandLogoMap[brand.id]}
+                        alt={`${brand.name} logo`}
+                        width={160}
+                        height={44}
+                        className="object-contain"
+                        style={{ maxHeight: "36px", width: "auto" }}
+                        priority
+                      />
+                    </span>
+                  </div>
+                  <p className="text-white/40 text-[10px] font-mono uppercase tracking-widest mt-2">
+                    DeNova Technologies — Authorized Distributor of {brand.name}
+                  </p>
                 </div>
                 <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white mb-3">
                   {brand.name}
@@ -112,74 +133,38 @@ export default async function BrandPage({ params }: Props) {
 
         {/* Products grid */}
         <div className="max-w-7xl mx-auto px-6 lg:px-16 py-10 sm:py-20">
-          {/* Product groups (e.g. JWEI with two categories) */}
-          {brand.productGroups && brand.productGroups.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-10 sm:mb-16">
-              {brand.productGroups.map((group) => (
-                <div key={group.title}>
-                  <h2 className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-6 pb-3 border-b border-white/10">
-                    {group.title}
-                  </h2>
-                  <div className="flex flex-col gap-3">
-                    {group.items.map((p, i) => (
-                      <div
-                        key={p}
-                        className="flex items-center gap-4 bg-[#1B2F68] p-4 border border-white/10 hover:border-[#29B8E8]/40 transition-colors"
-                      >
-                        <span className="text-[#29B8E8] text-sm font-mono w-6 shrink-0">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <span className="text-white font-medium">{p}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
+          {/* Trust stat (C-TEX — verified accurate) */}
+          {brand.id === "ctex" && (
+            <div className="mb-10 sm:mb-16 bg-[#1B2F68] border-l-2 border-l-[#29B8E8] px-6 py-5 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-10">
+              <div>
+                <span className="text-white text-3xl font-mono font-bold">20+</span>
+                <span className="text-[#94A3B8] text-xs uppercase tracking-wider ml-2">Years in the Field</span>
+              </div>
+              <div>
+                <span className="text-white text-3xl font-mono font-bold">1000+</span>
+                <span className="text-[#94A3B8] text-xs uppercase tracking-wider ml-2">Installations Worldwide</span>
+              </div>
             </div>
-          ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-10 sm:mb-16">
-            {brand.softwareProducts.length > 0 && (
-              <div>
-                <h2 className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-6 pb-3 border-b border-white/10">
-                  Software Solutions
-                </h2>
-                <div className="flex flex-col gap-3">
-                  {brand.softwareProducts.map((p, i) => (
-                    <div
-                      key={p}
-                      className="flex items-center gap-4 bg-[#1B2F68] p-4 border border-white/10 hover:border-[#29B8E8]/40 transition-colors"
-                    >
-                      <span className="text-[#29B8E8] text-sm font-mono w-6 shrink-0">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="text-white font-medium">{p}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-            {brand.hardwareProducts.length > 0 && (
-              <div>
-                <h2 className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-6 pb-3 border-b border-white/10">
-                  Hardware Solutions
-                </h2>
-                <div className="flex flex-col gap-3">
-                  {brand.hardwareProducts.map((p, i) => (
-                    <div
-                      key={p}
-                      className="flex items-center gap-4 bg-[#1B2F68] p-4 border border-white/10 hover:border-[#29B8E8]/40 transition-colors"
-                    >
-                      <span className="text-[#29B8E8] text-sm font-mono w-6 shrink-0">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="text-white font-medium">{p}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
           )}
+
+          {/* Sub-product cards, grouped by category */}
+          {(subProducts[brand.id] ?? []).map((group) => (
+            <div key={group.title} className="mb-10 sm:mb-16">
+              <h2 className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-6 pb-3 border-b border-white/10">
+                {group.title}
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                {group.items.map((product, i) => (
+                  <SubProductCard
+                    key={product.slug}
+                    product={product}
+                    index={i}
+                    brandName={brand.name}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
 
           {/* Benefits */}
           <div className="mb-10 sm:mb-16">
