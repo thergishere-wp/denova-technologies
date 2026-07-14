@@ -51,7 +51,7 @@ export default async function BrandPage({ params }: Props) {
         <div className="bg-[#142250] pt-24 pb-10 sm:pt-32 sm:pb-20 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-6 lg:px-16">
             <Link
-              href="/#products"
+              href="/products"
               className="inline-flex items-center gap-2 text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-5 sm:mb-8 hover:gap-3 transition-all"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">

@@ -82,7 +82,7 @@ export default function SoftwareDevelopment() {
           className="mb-6"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            08 — Software Development
+            07 — Software Development
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Software Development Solutions

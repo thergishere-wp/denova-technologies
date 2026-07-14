@@ -186,15 +186,22 @@ function ProductModal({ brand, onClose }: { brand: Brand; onClose: () => void })
   );
 }
 
-export default function Products() {
+export default function Products({ standalone = false }: { standalone?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const [activeBrand, setActiveBrand] = useState<string | null>(null);
 
   const modalBrand = brands.find((b) => b.id === activeBrand) ?? null;
+  const Heading = standalone ? "h1" : "h2";
 
   return (
-    <section id="products" className="py-14 sm:py-20 lg:py-32 bg-[#0d1a3d]" ref={ref}>
+    <section
+      id="products"
+      className={`pb-14 sm:pb-20 lg:pb-32 bg-[#0d1a3d] ${
+        standalone ? "pt-32 sm:pt-40" : "pt-14 sm:pt-20 lg:pt-32"
+      }`}
+      ref={ref}
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -203,11 +210,11 @@ export default function Products() {
           className="mb-8 sm:mb-12 lg:mb-16"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            04 — Our Brands
+            Our Brands
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
+          <Heading className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Our Products
-          </h2>
+          </Heading>
           <div className="w-20 h-0.5 bg-[#29B8E8]" />
           <p className="text-[#94A3B8] text-base mt-6 max-w-2xl">
             Five world-class brands, one partner. Click any card for a closer look.

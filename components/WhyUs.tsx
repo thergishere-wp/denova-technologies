@@ -96,7 +96,7 @@ export default function WhyUs() {
             </span>
           </div>
           <div className="text-[#1E6CC8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            05 — Our Edge
+            04 — Our Edge
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-[#142250] mb-4">
             Why Partner With Us

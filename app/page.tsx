@@ -1,10 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ProductConveyor from "@/components/ProductConveyor";
 import TrustBar from "@/components/TrustBar";
 import WhatWeDo from "@/components/WhatWeDo";
 import Industries from "@/components/Industries";
 import Solutions from "@/components/Solutions";
-import Products from "@/components/Products";
 import WhyUs from "@/components/WhyUs";
 import Consultancy from "@/components/Consultancy";
 import MachineryServices from "@/components/MachineryServices";
@@ -20,11 +20,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <ProductConveyor />
         <TrustBar />
         <WhatWeDo />
         <Industries />
         <Solutions />
-        <Products />
         <WhyUs />
         <Consultancy />
         <MachineryServices />

@@ -77,7 +77,7 @@ export default function Team() {
           className="mb-8 sm:mb-12 lg:mb-16"
         >
           <div className="text-[#1E6CC8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            10 — The People
+            09 — The People
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-[#142250] mb-4">
             Meet Our Team

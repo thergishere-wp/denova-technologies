@@ -68,7 +68,7 @@ export default function Contact() {
           className="mb-8 sm:mb-12 lg:mb-16"
         >
           <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            11 — Get In Touch
+            10 — Get In Touch
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
             Ready to Upgrade Your Manufacturing?
