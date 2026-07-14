@@ -21,8 +21,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop"
-          alt="Industrial manufacturing facility"
+          src="/images/hero-automation.jpg"
+          alt="Industrial robot arm on an automated manufacturing line"
           fill
           priority
           className="object-cover opacity-15"
@@ -129,8 +129,8 @@ export default function Hero() {
               style={{ clipPath: "polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop"
-                alt="Industrial fabric cutting machinery in a garment factory"
+                src="/images/hero-machine.jpg"
+                alt="JWEI automated multi-layer fabric cutting system"
                 fill
                 className="object-cover object-center"
                 sizes="50vw"

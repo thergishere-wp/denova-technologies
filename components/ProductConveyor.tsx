@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -125,35 +125,42 @@ function ConveyorCard({
 export default function ProductConveyor() {
   const trackRef = useRef<HTMLDivElement>(null);
   const pausedRef = useRef(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReducedMotion(mq.matches);
-    const onChange = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
 
   // Auto-scroll via scrollLeft on a real scroll container: native touch-drag
   // and keyboard focus scrolling keep working, the rAF loop just advances the
   // belt whenever the user isn't interacting.
+  //
+  // The belt position lives in a JS float (posRef) and is only WRITTEN to
+  // scrollLeft — Safari rounds scrollLeft to whole pixels on read, so a
+  // read-increment-write loop with a sub-pixel step gets stuck at 0.
   useEffect(() => {
-    if (reducedMotion) return;
     const track = trackRef.current;
     if (!track) return;
+    const SPEED = 36; // px per second
     let raf: number;
-    const step = () => {
+    let pos = track.scrollLeft;
+    let last: number | null = null;
+
+    const step = (ts: number) => {
+      if (last === null) last = ts;
+      const dt = Math.min(ts - last, 100) / 1000;
+      last = ts;
       if (!pausedRef.current) {
         const half = track.scrollWidth / 2;
-        track.scrollLeft = track.scrollLeft >= half ? track.scrollLeft - half + 0.6 : track.scrollLeft + 0.6;
+        pos += SPEED * dt;
+        if (half > 0 && pos >= half) pos -= half;
+        track.scrollLeft = pos;
       }
       raf = requestAnimationFrame(step);
     };
     raf = requestAnimationFrame(step);
 
     const pause = () => (pausedRef.current = true);
-    const resume = () => (pausedRef.current = false);
+    const resume = () => {
+      // adopt wherever the user dragged/focused to before resuming
+      pos = track.scrollLeft;
+      pausedRef.current = false;
+    };
     track.addEventListener("mouseenter", pause);
     track.addEventListener("mouseleave", resume);
     track.addEventListener("touchstart", pause, { passive: true });
@@ -171,7 +178,7 @@ export default function ProductConveyor() {
       track.removeEventListener("focusin", pause);
       track.removeEventListener("focusout", resume);
     };
-  }, [reducedMotion]);
+  }, []);
 
   return (
     <section

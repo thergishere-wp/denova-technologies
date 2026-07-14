@@ -12,8 +12,12 @@ export interface SubProductSpec {
 export interface SubProduct {
   name: string;
   slug: string;
-  /** Image path — client will supply real photos at this exact path. */
-  image: string;
+  /**
+   * Image path — drop a real photo at this exact path under /public.
+   * When omitted, the card renders a branded face (brand logo + name),
+   * matching how the print brochure presents list-only products.
+   */
+  image?: string;
   description: string;
   specs?: SubProductSpec[];
 }
@@ -55,7 +59,6 @@ export const subProducts: Record<string, SubProductGroup[]> = {
         {
           name: "Auto-Marker",
           slug: "auto-marker",
-          image: "/products/docad/auto-marker.jpg",
           description:
             "Intelligent AutoMarker & Code Plan System — set the fabric width and assortment count and the system runs hundreds of layout combinations automatically. Delivers markers 10–20x faster than manual layout while cutting fabric loss and cost by up to 8%.",
           specs: [
@@ -129,7 +132,6 @@ export const subProducts: Record<string, SubProductGroup[]> = {
         {
           name: "Air Floatation Spreading Tables",
           slug: "air-floatation-spreading-tables",
-          image: "/products/ozer-makina/air-floatation-spreading-tables.jpg",
           description:
             "Air floatation tables that let heavy fabric layers glide into position for uniform spreading, preventing distortion during handling.",
         },
@@ -139,7 +141,6 @@ export const subProducts: Record<string, SubProductGroup[]> = {
         {
           name: "Conveyorized Spreading Table",
           slug: "conveyorized-spreading-table",
-          image: "/products/ozer-makina/conveyorized-spreading-table.jpg",
           description:
             "Conveyor-driven spreading table that carries fabric along the lay automatically, supporting consistent, distortion-free spreading.",
         },
@@ -148,7 +149,6 @@ export const subProducts: Record<string, SubProductGroup[]> = {
         {
           name: "Fabric Loaders",
           slug: "fabric-loaders",
-          image: "/products/ozer-makina/fabric-loaders.jpg",
           description:
             "Loading systems that lift and position heavy fabric rolls onto spreading machines safely, reducing manual handling in the cutting room.",
         },

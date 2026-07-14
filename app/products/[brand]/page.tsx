@@ -1,3 +1,5 @@
+import { existsSync } from "fs";
+import path from "path";
 import { notFound } from "next/navigation";
 import { brands } from "@/lib/brands";
 import { galleryImages } from "@/lib/galleryImages";
@@ -154,14 +156,24 @@ export default async function BrandPage({ params }: Props) {
                 {group.title}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-                {group.items.map((product, i) => (
-                  <SubProductCard
-                    key={product.slug}
-                    product={product}
-                    index={i}
-                    brandName={brand.name}
-                  />
-                ))}
+                {group.items.map((product, i) => {
+                  // Brochure appears once the PDF is dropped at this path —
+                  // checked at build time, no code change needed.
+                  const brochure = `/brochures/${brand.id}/${product.slug}.pdf`;
+                  const hasBrochure = existsSync(
+                    path.join(process.cwd(), "public", brochure)
+                  );
+                  return (
+                    <SubProductCard
+                      key={product.slug}
+                      product={product}
+                      index={i}
+                      brandName={brand.name}
+                      brandLogo={brandLogoMap[brand.id]}
+                      brochureUrl={hasBrochure ? brochure : undefined}
+                    />
+                  );
+                })}
               </div>
             </div>
           ))}

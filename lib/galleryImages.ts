@@ -11,12 +11,8 @@ export const galleryImages: Record<string, GalleryImage[]> = {
   "ozer-makina": [
     { src: "/products/ozer/ozer-1.png", alt: "Özer Makina automatic spreading machine" },
     {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=750&fit=crop&auto=format",
-      alt: "Özer Makina industrial textile production line",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=750&fit=crop&auto=format",
-      alt: "Özer Makina fabric spreading system",
+      src: "/products/ozer-makina/automatic-spreading-machine.jpg",
+      alt: "Özer Makina servo-motor automatic spreading machine spreading patterned fabric",
     },
   ],
   jingwei: [
@@ -31,12 +27,8 @@ export const galleryImages: Record<string, GalleryImage[]> = {
     { src: "/products/ctex/ctex-3.jpg", alt: "C-TEX fabric relaxing machine" },
   ],
   "mu-bigdata": [
-    { src: "/products/mu/mu-1.webp", alt: "MU Big Data factory software" },
-    { src: "/products/mu/mu-2.webp", alt: "MU MES system" },
-    { src: "/products/mu/mu-3.png", alt: "MU production analytics dashboard" },
-    {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=750&fit=crop&auto=format",
-      alt: "MU Big Data shop floor tablet U-PAD in use",
-    },
+    { src: "/products/mu/mu-1.webp", alt: "MU-GST standard time system with video process analysis" },
+    { src: "/products/mu/mu-2.webp", alt: "U-PAD shop floor tablet terminal at a sewing station" },
+    { src: "/products/mu/mu-3.png", alt: "MU-MES line balancing and production dashboard" },
   ],
 };
