@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const capabilities = [
   {
@@ -81,21 +82,46 @@ export default function SoftwareDevelopment() {
           transition={{ duration: 0.6 }}
           className="mb-6"
         >
-          <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            07 — Software Development
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
+            <div>
+              <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
+                07 — Software Development
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
+                Software Development Solutions
+              </h2>
+              <div className="w-20 h-0.5 bg-[#29B8E8] mb-6" />
+            </div>
+            {/* Partner: SynthiaSync */}
+            <div className="shrink-0 sm:text-right">
+              <div className="text-white/40 text-[10px] font-mono uppercase tracking-widest mb-2">
+                In Partnership With
+              </div>
+              <span className="bg-white px-4 py-3 inline-flex items-center">
+                <Image
+                  src="/brands/synthiasync-logo.png"
+                  alt="SynthiaSync — Your Pathway to Profitability logo"
+                  width={160}
+                  height={37}
+                  className="object-contain"
+                  style={{ maxHeight: "34px", width: "auto" }}
+                />
+              </span>
+            </div>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
-            Software Development Solutions
-          </h2>
-          <div className="w-20 h-0.5 bg-[#29B8E8] mb-6" />
           <p className="text-[#29B8E8] font-semibold text-lg mb-3">
             Tailor-Made Software Solutions for the Apparel Industry
           </p>
-          <p className="text-[#94A3B8] text-base leading-relaxed max-w-3xl">
+          <p className="text-[#94A3B8] text-base leading-relaxed max-w-3xl mb-3">
             DeNova Technologies Ltd offers specialized software development services designed
             exclusively for apparel manufacturers. Backed by our strong and experienced software
             development team in Sri Lanka, we develop and customize software solutions to meet the
             unique requirements of every department within an apparel manufacturing organization.
+          </p>
+          <p className="text-[#94A3B8] text-base leading-relaxed max-w-3xl">
+            Our objective is to help manufacturers improve efficiency, increase visibility,
+            streamline operations, and make data-driven decisions through innovative technology
+            solutions.
           </p>
         </motion.div>
 

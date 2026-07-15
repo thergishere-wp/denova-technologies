@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const consultancyAreas = [
   "Warehouse and Raw Material Management",
@@ -39,20 +40,44 @@ export default function Consultancy() {
           transition={{ duration: 0.6 }}
           className="mb-6"
         >
-          <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
-            05 — Services
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
+            <div>
+              <div className="text-[#29B8E8] text-xs font-mono uppercase tracking-[0.25em] mb-3">
+                05 — Services
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
+                Apparel Factory Consultancy
+              </h2>
+              <div className="w-20 h-0.5 bg-[#29B8E8] mb-6" />
+            </div>
+            {/* Partner: BuildTeck Asia */}
+            <div className="shrink-0 sm:text-right">
+              <div className="text-white/40 text-[10px] font-mono uppercase tracking-widest mb-2">
+                In Partnership With
+              </div>
+              <span className="bg-white px-4 py-3 inline-flex items-center">
+                <Image
+                  src="/brands/buildteck-logo.png"
+                  alt="BuildTeck Asia logo"
+                  width={100}
+                  height={73}
+                  className="object-contain"
+                  style={{ maxHeight: "64px", width: "auto" }}
+                />
+              </span>
+            </div>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white mb-4">
-            Apparel Factory Consultancy
-          </h2>
-          <div className="w-20 h-0.5 bg-[#29B8E8] mb-6" />
           <p className="text-[#29B8E8] font-semibold text-lg mb-3">
             End-to-End Consultancy for Apparel Manufacturing
           </p>
-          <p className="text-[#94A3B8] text-base leading-relaxed max-w-3xl">
+          <p className="text-[#94A3B8] text-base leading-relaxed max-w-3xl mb-3">
             At DeNova Technologies Ltd, we provide comprehensive consultancy services to apparel
             manufacturers, covering the entire production process — from the warehouse to finished
             goods.
+          </p>
+          <p className="text-[#94A3B8] text-base leading-relaxed max-w-3xl">
+            Our experienced team works closely with factories to improve productivity, efficiency,
+            quality, and profitability across every department.
           </p>
         </motion.div>
 
@@ -83,8 +108,11 @@ export default function Consultancy() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="bg-[#142250] border border-[#29B8E8]/30 p-5 sm:p-8"
         >
-          <p className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-4 sm:mb-5">
+          <p className="text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-2">
             Our Objectives
+          </p>
+          <p className="text-white/60 text-sm mb-4 sm:mb-5">
+            To help apparel manufacturers achieve:
           </p>
           <div className="flex flex-wrap gap-x-10 gap-y-4">
             {objectives.map((obj) => (
@@ -110,6 +138,11 @@ export default function Consultancy() {
               </div>
             ))}
           </div>
+          <p className="text-[#94A3B8] text-sm leading-relaxed mt-6 pt-5 border-t border-white/10 max-w-3xl">
+            DeNova Technologies Ltd serves as a strategic partner for apparel factories, delivering
+            practical solutions and expert guidance in every department — from warehouse operations
+            to finished goods dispatch.
+          </p>
         </motion.div>
       </div>
     </section>

@@ -6,7 +6,7 @@ import { useRef } from "react";
 const cards = [
   {
     title: "OUR MISSION",
-    body: "To empower apparel and non-apparel manufacturers with world-class machinery, advanced software, and smart factory solutions that drive efficiency, reduce waste, and accelerate production.",
+    body: "To empower apparel and non-apparel manufacturers with world-class machinery, advanced software, and smart factory solutions that drive efficiency, reduce wastage, and accelerate production — with low cost of ownership.",
     borderColor: "#29B8E8",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">

@@ -72,7 +72,12 @@ export default function MachineryServices() {
           <p className="text-[#94A3B8] text-base leading-relaxed max-w-3xl">
             DeNova Technologies Ltd provides comprehensive technical support services, preventive
             maintenance solutions, and authenticated spare parts for most of the world&apos;s leading
-            cutting room machinery brands.
+            cutting room machinery brands used in the apparel industry.
+          </p>
+          <p className="text-[#94A3B8] text-base leading-relaxed max-w-3xl mt-3">
+            Our experienced technical team is committed to ensuring maximum machine uptime,
+            improved productivity, and extended equipment life through reliable service and
+            high-quality spare parts.
           </p>
         </motion.div>
 
