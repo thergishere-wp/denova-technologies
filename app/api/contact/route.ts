@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       from: "DeNova Website <noreply@denovatec.com>",
-      to: ["sales@denovatec.com"],
+      to: ["dinesh@denovatech.com"],
       subject: `New Enquiry from ${company} (${country})`,
       html: `
         <div style="font-family: 'IBM Plex Sans', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #142250; color: #f8fafc; padding: 32px;">

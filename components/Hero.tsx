@@ -15,6 +15,22 @@ const heroSlides = [
   },
 ];
 
+// Dimmed full-bleed background — advanced automated manufacturing imagery
+const bgSlides = [
+  {
+    src: "/images/hero-bg-production-line.jpg",
+    alt: "Automated production line handling material panels",
+  },
+  {
+    src: "/images/hero-bg-robot-arm.jpg",
+    alt: "Precision robotic arm gripper",
+  },
+  {
+    src: "/images/hero-bg-textile.jpg",
+    alt: "Automated textile spinning frame with thread bobbins",
+  },
+];
+
 const wordVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
@@ -30,6 +46,14 @@ export default function Hero() {
       id="home"
       className="relative min-h-[640px] sm:min-h-screen flex items-center bg-[#142250] overflow-hidden"
     >
+      {/* Background — dimmed, rotating advanced-manufacturing imagery */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 opacity-15">
+          <ImageRotator images={bgSlides} intervalMs={6000} sizes="100vw" showDots={false} priority />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#142250] via-[#142250]/85 to-[#142250]/30" />
+      </div>
+
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-16 pt-24 sm:pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px] sm:min-h-screen py-10 sm:py-16 lg:py-24">
           {/* Left: text */}

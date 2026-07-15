@@ -183,10 +183,10 @@ export default function Contact() {
                     Global Email
                   </div>
                   <a
-                    href="mailto:sales@denovatec.com"
+                    href="mailto:dinesh@denovatech.com"
                     className="text-white font-bold hover:text-[#29B8E8] transition-colors"
                   >
-                    sales@denovatec.com
+                    dinesh@denovatech.com
                   </a>
                 </div>
               </div>

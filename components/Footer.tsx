@@ -80,8 +80,8 @@ export default function Footer() {
               Sri Lanka · Bangladesh · Kenya · New Zealand.
             </p>
             <div className="flex flex-col gap-2">
-              <a href="mailto:sales@denovatec.com" className="text-[#94A3B8] text-xs hover:text-[#29B8E8] transition-colors font-mono">
-                sales@denovatec.com
+              <a href="mailto:dinesh@denovatech.com" className="text-[#94A3B8] text-xs hover:text-[#29B8E8] transition-colors font-mono">
+                dinesh@denovatech.com
               </a>
               <span className="text-[#94A3B8] text-xs font-mono">www.denovatec.com</span>
             </div>

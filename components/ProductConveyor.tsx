@@ -40,7 +40,7 @@ const items = [
     featured: false,
   },
   {
-    name: "Digital Cutting Machine — MI60",
+    name: "Automatic Cutting Machine — MI60",
     brand: "JWEI",
     brandId: "jingwei",
     href: "/products/jingwei",

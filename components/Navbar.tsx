@@ -70,8 +70,8 @@ export default function Navbar() {
               <Image
                 src="/denova-logo.png"
                 alt="DeNova Technologies Ltd"
-                width={120}
-                height={40}
+                width={168}
+                height={48}
                 className="object-contain"
                 priority
               />
@@ -83,8 +83,8 @@ export default function Navbar() {
               <Image
                 src="/denova-logo.png"
                 alt="DeNova Technologies Ltd"
-                width={120}
-                height={40}
+                width={168}
+                height={48}
                 className="object-contain"
                 priority
               />
