@@ -93,7 +93,7 @@ export default function Team() {
           transition={{ duration: 0.6 }}
           className="bg-[#142250] mb-6 flex flex-col md:flex-row overflow-hidden"
         >
-          <div className="relative w-full md:w-80 h-52 sm:h-72 md:h-auto shrink-0 bg-[#E2E8F0]">
+          <div className="relative w-full md:w-80 aspect-square shrink-0 self-start bg-[#E2E8F0]">
             <Image
               src={lead.image}
               alt={`${lead.name} — ${lead.title}`}
@@ -133,7 +133,7 @@ export default function Team() {
               transition={{ delay: 0.15 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="group hover:-translate-y-1 transition-transform duration-150 flex flex-row bg-[#142250] overflow-hidden"
             >
-              <div className="relative w-28 sm:w-40 h-auto shrink-0 bg-[#E2E8F0]">
+              <div className="relative w-28 sm:w-40 aspect-square shrink-0 self-start bg-[#E2E8F0]">
                 <Image
                   src={member.image}
                   alt={`${member.name} — ${member.title}`}
