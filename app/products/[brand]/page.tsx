@@ -9,7 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ProductImageGallery from "@/components/ProductImageGallery";
+import ImageRotator from "@/components/ImageRotator";
 import SubProductCard from "@/components/SubProductCard";
 
 interface Props {
@@ -50,8 +50,24 @@ export default async function BrandPage({ params }: Props) {
       <Navbar />
       <main className="min-h-screen bg-[#0d1a3d]">
         {/* Hero */}
-        <div className="bg-[#142250] pt-24 pb-10 sm:pt-32 sm:pb-20 border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-6 lg:px-16">
+        <div className="relative overflow-hidden bg-[#142250] pt-24 pb-10 sm:pt-32 sm:pb-20 border-b border-white/10">
+          {/* Background — brand product imagery, dimmed and rotating behind the content */}
+          {images.length > 0 && (
+            <div className="absolute inset-0 z-0">
+              <div className="absolute inset-0 opacity-35">
+                <ImageRotator
+                  images={images}
+                  intervalMs={5000}
+                  sizes="100vw"
+                  showDots={false}
+                  priority
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#142250] via-[#142250]/80 to-[#142250]/25" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#142250] via-transparent to-[#142250]/40" />
+            </div>
+          )}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16">
             <Link
               href="/products"
               className="inline-flex items-center gap-2 text-[#29B8E8] text-xs font-mono uppercase tracking-widest mb-5 sm:mb-8 hover:gap-3 transition-all"
@@ -127,11 +143,6 @@ export default async function BrandPage({ params }: Props) {
             </p>
           </div>
         </div>
-
-        {/* Product Image Gallery */}
-        {images.length > 0 && (
-          <ProductImageGallery images={images} brandName={brand.name} />
-        )}
 
         {/* Products grid */}
         <div className="max-w-7xl mx-auto px-6 lg:px-16 py-10 sm:py-20">

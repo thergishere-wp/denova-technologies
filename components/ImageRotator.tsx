@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 interface RotatorImage {
@@ -38,25 +37,26 @@ export default function ImageRotator({
 
   return (
     <div className="relative w-full h-full overflow-hidden">
-      <AnimatePresence mode="sync">
-        <motion.div
-          key={images[index].src}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="absolute inset-0"
+      {/* All slides stay mounted; only opacity toggles — avoids relying on
+          AnimatePresence exit-unmount timing, which left faded-out slides
+          stuck in the DOM indefinitely on long-lived pages. */}
+      {images.map((img, i) => (
+        <div
+          key={img.src}
+          className="absolute inset-0 transition-opacity duration-[600ms] ease-in-out"
+          style={{ opacity: i === index ? 1 : 0 }}
+          aria-hidden={i === index ? undefined : true}
         >
           <Image
-            src={images[index].src}
-            alt={images[index].alt}
+            src={img.src}
+            alt={img.alt}
             fill
             className="object-cover"
             sizes={sizes}
-            priority={priority}
+            priority={priority && i === 0}
           />
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      ))}
 
       {showDots && images.length > 1 && (
         <div className="absolute bottom-1 left-1/2 -translate-x-1/2 z-10 flex items-center">
