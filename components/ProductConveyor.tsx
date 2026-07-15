@@ -4,12 +4,21 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+const brandLogoMap: Record<string, string> = {
+  docad: "/brands/docad-logo.jpg",
+  "ozer-makina": "/brands/ozer-logo.png",
+  jingwei: "/brands/jwei-logo.svg",
+  ctex: "/brands/ctex-logo.png",
+  "mu-bigdata": "/brands/mu-logo.jpg",
+};
+
 // One flagship product per functional category — a breadth-of-range proof
 // strip, deliberately not one-per-brand or the full catalog.
 const items = [
   {
     name: "CAD & Pattern Making Software",
     brand: "DOCAD",
+    brandId: "docad",
     href: "/products/docad",
     image: "/products/docad/pattern-creation.jpg",
     featured: false,
@@ -17,6 +26,7 @@ const items = [
   {
     name: "Inkjet Plotter",
     brand: "DOCAD",
+    brandId: "docad",
     href: "/products/docad",
     image: "/products/docad/inkjet-plotter.jpg",
     featured: false,
@@ -24,6 +34,7 @@ const items = [
   {
     name: "Automatic Spreading Machine",
     brand: "Özer Makina",
+    brandId: "ozer-makina",
     href: "/products/ozer-makina",
     image: "/products/ozer-makina/automatic-spreading-machine.jpg",
     featured: false,
@@ -31,6 +42,7 @@ const items = [
   {
     name: "Digital Cutting Machine — MI60",
     brand: "JWEI",
+    brandId: "jingwei",
     href: "/products/jingwei",
     image: "/products/jingwei/low-ply-cutting.jpg",
     featured: true,
@@ -39,6 +51,7 @@ const items = [
   {
     name: "Fabric Inspection Machine",
     brand: "C-TEX",
+    brandId: "ctex",
     href: "/products/ctex",
     image: "/products/ctex/fabric-inspection-machine.jpg",
     featured: false,
@@ -46,6 +59,7 @@ const items = [
   {
     name: "Fabric Relaxing Machine",
     brand: "C-TEX",
+    brandId: "ctex",
     href: "/products/ctex",
     image: "/products/ctex/fabric-relaxing-machine.jpg",
     featured: false,
@@ -53,6 +67,7 @@ const items = [
   {
     name: "MES Factory Dashboard",
     brand: "MU Big Data",
+    brandId: "mu-bigdata",
     href: "/products/mu-bigdata",
     image: "/products/mu-bigdata/mu-mes.jpg",
     featured: false,
@@ -60,6 +75,7 @@ const items = [
   {
     name: "Digitizer",
     brand: "DOCAD",
+    brandId: "docad",
     href: "/products/docad",
     image: "/products/docad/digitizer.jpg",
     featured: false,
@@ -99,8 +115,17 @@ function ConveyorCard({
         )}
       </div>
       <div className="p-3 sm:p-4">
-        <div className="text-[#29B8E8] text-[10px] font-mono uppercase tracking-widest mb-1">
-          {item.brand}
+        <div className="h-6 sm:h-7 mb-2 flex items-center">
+          <span className="bg-white px-2 py-1 inline-flex items-center">
+            <Image
+              src={brandLogoMap[item.brandId]}
+              alt={`${item.brand} logo`}
+              width={90}
+              height={28}
+              className="object-contain"
+              style={{ maxHeight: "20px", width: "auto" }}
+            />
+          </span>
         </div>
         <div className="text-white font-bold text-sm leading-snug">
           {item.name}

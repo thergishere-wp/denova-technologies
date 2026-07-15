@@ -29,14 +29,14 @@ const countries = [
     phone: "+880 1817-079822",
   },
   {
-    name: "Kenya",
-    market: "Emerging African apparel market with growing EPZ manufacturing sector.",
-    phone: "",
-  },
-  {
     name: "New Zealand",
     market: "HQ for global operations, strategy, and brand partnerships.",
     phone: "+64 27 5555880",
+  },
+  {
+    name: "Kenya",
+    market: "Emerging African apparel market with growing EPZ manufacturing sector.",
+    phone: "",
   },
 ];
 

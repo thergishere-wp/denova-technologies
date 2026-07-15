@@ -2,6 +2,24 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import Image from "next/image";
+
+const WHATSAPP_LINK = "https://wa.me/94777395884";
+
+function WhatsAppIcon({ size = 28 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <path
+        d="M16 4C9.373 4 4 9.373 4 16c0 2.362.687 4.564 1.875 6.418L4 28l5.79-1.831A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 4 16 4z"
+        fill="#25D366"
+      />
+      <path
+        d="M22.3 18.5c-.3-.15-1.8-.9-2.1-1-.3-.1-.5-.15-.7.15-.2.3-.8 1-.95 1.2-.15.2-.35.2-.65.05-.3-.15-1.25-.45-2.4-1.45-.9-.8-1.5-1.8-1.65-2.1-.15-.3 0-.45.15-.6.15-.15.3-.35.45-.55.15-.15.2-.3.3-.5.1-.2.05-.35 0-.5-.05-.15-.7-1.7-.95-2.3-.25-.6-.5-.5-.7-.5h-.6c-.2 0-.5.05-.75.35-.25.3-1 1-1 2.4s1.05 2.85 1.2 3.05c.15.2 2.05 3.15 5 4.4.7.3 1.25.5 1.7.6.7.2 1.35.15 1.85.1.55-.1 1.8-.75 2.05-1.45.25-.7.25-1.3.15-1.45-.1-.15-.3-.2-.6-.35z"
+        fill="white"
+      />
+    </svg>
+  );
+}
 
 const offices = [
   {
@@ -88,6 +106,49 @@ export default function Contact() {
               machinery and software solutions for your factory. Reach out and
               let&apos;s get started.
             </p>
+
+            {/* WhatsApp — fastest channel: QR to scan on desktop, direct button on mobile */}
+            <div className="mb-6 sm:mb-10 bg-[#1B2F68] border border-white/10 border-t-2 border-t-[#25D366] p-5 sm:p-6 flex items-center gap-6">
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2.5 mb-2">
+                  <WhatsAppIcon size={24} />
+                  <span className="text-white font-bold uppercase tracking-wide text-sm sm:text-base">
+                    Chat on WhatsApp
+                  </span>
+                </div>
+                <p className="text-[#94A3B8] text-xs sm:text-sm leading-relaxed">
+                  Get instant answers from our team — no forms, no waiting.
+                </p>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="md:hidden mt-4 inline-flex items-center justify-center gap-2 w-full bg-[#25D366] text-[#0d1a3d] font-bold uppercase tracking-widest text-xs px-6 py-3.5 hover:bg-[#20BD5A] transition-colors duration-150 cursor-pointer"
+                >
+                  <WhatsAppIcon size={18} />
+                  Message Us Now
+                </a>
+              </div>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:flex flex-col items-center gap-2 shrink-0 group"
+                aria-label="Open WhatsApp chat with DeNova Technologies"
+              >
+                <div className="bg-white p-2 transition-transform duration-150 group-hover:scale-105">
+                  <Image
+                    src="/whatsapp-qr.png"
+                    alt="QR code to chat with DeNova Technologies on WhatsApp"
+                    width={128}
+                    height={128}
+                  />
+                </div>
+                <span className="text-[#94A3B8] text-[10px] font-mono uppercase tracking-widest group-hover:text-[#25D366] transition-colors">
+                  Scan to Chat
+                </span>
+              </a>
+            </div>
 
             {/* Offices */}
             <div className="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-10">

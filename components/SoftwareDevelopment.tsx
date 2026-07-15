@@ -94,7 +94,7 @@ export default function SoftwareDevelopment() {
             </div>
             {/* Partner: SynthiaSync */}
             <div className="shrink-0 sm:text-right">
-              <div className="text-white/40 text-[10px] font-mono uppercase tracking-widest mb-2">
+              <div className="text-white/70 text-xs sm:text-sm font-mono uppercase tracking-wider mb-2.5">
                 In Partnership With
               </div>
               <span className="bg-white px-4 py-3 inline-flex items-center">

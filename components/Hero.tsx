@@ -13,10 +13,6 @@ const heroSlides = [
     src: "/images/hero-flatbed.jpg",
     alt: "JWEI flatbed digital cutter with automatic collection",
   },
-  {
-    src: "/images/hero-automation.jpg",
-    alt: "Industrial robot arm on an automated manufacturing line",
-  },
 ];
 
 const wordVariants = {
@@ -34,19 +30,6 @@ export default function Hero() {
       id="home"
       className="relative min-h-[640px] sm:min-h-screen flex items-center bg-[#142250] overflow-hidden"
     >
-      {/* Background image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-automation.jpg"
-          alt="Industrial robot arm on an automated manufacturing line"
-          fill
-          priority
-          className="object-cover opacity-15"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#142250] via-[#142250]/85 to-[#142250]/30" />
-      </div>
-
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-16 pt-24 sm:pt-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px] sm:min-h-screen py-10 sm:py-16 lg:py-24">
           {/* Left: text */}
