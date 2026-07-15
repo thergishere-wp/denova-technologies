@@ -2,6 +2,22 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ImageRotator from "@/components/ImageRotator";
+
+const heroSlides = [
+  {
+    src: "/images/hero-machine.jpg",
+    alt: "JWEI MI60 automated multi-layer fabric cutting system",
+  },
+  {
+    src: "/images/hero-flatbed.jpg",
+    alt: "JWEI flatbed digital cutter with automatic collection",
+  },
+  {
+    src: "/images/hero-automation.jpg",
+    alt: "Industrial robot arm on an automated manufacturing line",
+  },
+];
 
 const wordVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -128,14 +144,14 @@ export default function Hero() {
               className="absolute inset-0 border-l-2 border-[#29B8E8]/40 overflow-hidden"
               style={{ clipPath: "polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
             >
-              <Image
-                src="/images/hero-machine.jpg"
-                alt="JWEI automated multi-layer fabric cutting system"
-                fill
-                className="object-cover object-center"
+              <ImageRotator
+                images={heroSlides}
+                intervalMs={5000}
                 sizes="50vw"
+                showDots={false}
+                priority
               />
-              <div className="absolute inset-0 bg-[#142250]/40" />
+              <div className="absolute inset-0 bg-[#142250]/40 pointer-events-none" />
             </div>
             {/* Cyan accent line */}
             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-[#29B8E8] to-transparent" />
