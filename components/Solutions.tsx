@@ -14,69 +14,11 @@ const brandLogoMap: Record<string, string> = {
   "mu-bigdata": "/brands/mu-logo.jpg",
 };
 
-const icons: Record<string, React.ReactNode> = {
-  // CAD & Pattern Making — blueprint sheet with garment outline + registration marks
-  cad: (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <rect x="5" y="5" width="30" height="30" stroke="#29B8E8" strokeWidth="1.5" />
-      <path
-        d="M16.5 11c0 2.2 7 2.2 7 0l4.5 2-2 4.5-2.5-1V29h-7V16.5l-2.5 1-2-4.5 4.5-2z"
-        stroke="#29B8E8"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <path d="M9 31h3M10.5 29.5v3" stroke="#29B8E8" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M28 9h3M29.5 7.5v3" stroke="#29B8E8" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  ),
-  // Spreading & Cutting — fabric roll feeding a lay, rotary blade cutting through
-  cut: (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <circle cx="9" cy="27" r="5" stroke="#29B8E8" strokeWidth="1.5" />
-      <circle cx="9" cy="27" r="1.5" stroke="#29B8E8" strokeWidth="1.5" />
-      <path d="M9 22h27M9 32h27" stroke="#29B8E8" strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="26" cy="17" r="6" stroke="#29B8E8" strokeWidth="1.5" />
-      <circle cx="26" cy="17" r="1" fill="#29B8E8" />
-      <path
-        d="M26 24v8"
-        stroke="#29B8E8"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeDasharray="2.5 3"
-      />
-    </svg>
-  ),
-  // Industrial Engineering — analytics panel with bars + gear
-  engineering: (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <rect x="4" y="6" width="22" height="18" stroke="#29B8E8" strokeWidth="1.5" />
-      <path d="M9 20v-5M15 20v-9M21 20v-3" stroke="#29B8E8" strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="30" cy="30" r="5" stroke="#29B8E8" strokeWidth="1.5" />
-      <circle cx="30" cy="30" r="1.5" fill="#29B8E8" />
-      <path
-        d="M30 21v2.5M30 36.5V39M21 30h2.5M36.5 30H39M23.6 23.6l1.8 1.8M34.6 34.6l1.8 1.8M36.4 23.6l-1.8 1.8M25.4 34.6l-1.8 1.8"
-        stroke="#29B8E8"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  ),
-  // Smart Factory — factory building linked to network nodes
-  factory: (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <path d="M5 35V23l7-6v6l7-6v6h16v12H5z" stroke="#29B8E8" strokeWidth="1.5" strokeLinejoin="round" />
-      <rect x="13" y="29" width="5" height="6" stroke="#29B8E8" strokeWidth="1.5" />
-      <circle cx="12" cy="8" r="2.5" stroke="#29B8E8" strokeWidth="1.5" />
-      <circle cx="24" cy="5" r="2.5" stroke="#29B8E8" strokeWidth="1.5" />
-      <circle cx="33" cy="11" r="2.5" stroke="#29B8E8" strokeWidth="1.5" />
-      <path
-        d="M12 10.5v4M24 7.5V20M33 13.5v6M14.4 7.4l7.2-1.8M26.3 6.2l4.6 3.2"
-        stroke="#29B8E8"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  ),
+const icons: Record<string, string> = {
+  cad: "/icons/solutions/cad-pattern.svg",
+  cut: "/icons/solutions/spreading-cutting.svg",
+  engineering: "/icons/solutions/industrial-engineering.svg",
+  factory: "/icons/solutions/smart-factory.svg",
 };
 
 export default function Solutions() {
@@ -125,8 +67,8 @@ export default function Solutions() {
                 }`}
                 aria-expanded={isActive}
               >
-                <div className={`scale-75 sm:scale-100 transition-transform duration-150 ${isActive ? "sm:scale-110" : "group-hover:scale-110"}`}>
-                  {icons[sol.icon]}
+                <div className={`relative w-16 h-16 sm:w-24 sm:h-24 transition-transform duration-150 ${isActive ? "sm:scale-110" : "group-hover:scale-110"}`}>
+                  <Image src={icons[sol.icon]} alt="" fill unoptimized className="object-contain" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="text-white font-bold uppercase tracking-wide text-xs sm:text-sm leading-snug mb-1 sm:mb-2">

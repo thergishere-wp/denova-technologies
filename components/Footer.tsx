@@ -164,8 +164,18 @@ export default function Footer() {
           <div className="text-[#94A3B8] text-xs">
             © 2024 DeNova Technologies Ltd. All Rights Reserved.
           </div>
-          <div className="text-[#94A3B8] text-[10px] font-mono text-center sm:text-right">
-            Authorized Distributor for DOCAD · Özer Makina · JINGWEI · C-TEX · MU Big Data
+          <div className="flex flex-col items-center sm:items-end gap-1">
+            <div className="text-[#94A3B8] text-[10px] font-mono text-center sm:text-right">
+              Authorized Distributor for DOCAD · Özer Makina · JINGWEI · C-TEX · MU Big Data
+            </div>
+            <a
+              href="https://storyset.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#94A3B8]/60 text-[10px] font-mono hover:text-[#29B8E8] transition-colors"
+            >
+              Illustrations by Storyset
+            </a>
           </div>
         </div>
       </div>
