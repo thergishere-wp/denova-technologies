@@ -4,20 +4,25 @@ import { Resend } from "resend";
 export async function POST(req: NextRequest) {
   const resend = new Resend(process.env.RESEND_API_KEY ?? "");
   try {
-    const { name, company, country, message } = await req.json() as {
+    const { name, email, company, country, message } = await req.json() as {
       name: string;
+      email: string;
       company: string;
       country: string;
       message: string;
     };
 
-    if (!name || !company || !country || !message) {
+    if (!name || !email || !company || !country || !message) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
     }
 
     await resend.emails.send({
       from: "DeNova Website <noreply@denovatec.com>",
       to: ["dinesh@denovatech.com"],
+      replyTo: email,
       subject: `New Enquiry from ${company} (${country})`,
       html: `
         <div style="font-family: 'IBM Plex Sans', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #142250; color: #f8fafc; padding: 32px;">
@@ -26,6 +31,10 @@ export async function POST(req: NextRequest) {
             <tr>
               <td style="padding: 8px 0; color: #94A3B8; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; width: 120px;">Name</td>
               <td style="padding: 8px 0; color: #f8fafc;">${name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 8px 0; color: #94A3B8; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Email</td>
+              <td style="padding: 8px 0; color: #f8fafc;">${email}</td>
             </tr>
             <tr>
               <td style="padding: 8px 0; color: #94A3B8; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Company</td>

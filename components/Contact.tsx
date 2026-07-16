@@ -54,6 +54,7 @@ export default function Contact() {
     const form = e.currentTarget;
     const data = {
       name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
       company: (form.elements.namedItem("company") as HTMLInputElement).value,
       country: (form.elements.namedItem("country") as HTMLSelectElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
@@ -225,6 +226,19 @@ export default function Contact() {
                   required
                   className="w-full bg-[#1B2F68] border border-white/10 text-white px-4 py-3 text-sm placeholder-white/30 focus:border-[#29B8E8] focus:outline-none transition-colors"
                   placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="text-[10px] font-mono uppercase tracking-widest text-[#94A3B8] block mb-1.5">
+                  Email Address *
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  className="w-full bg-[#1B2F68] border border-white/10 text-white px-4 py-3 text-sm placeholder-white/30 focus:border-[#29B8E8] focus:outline-none transition-colors"
+                  placeholder="you@company.com"
                 />
               </div>
               <div>
