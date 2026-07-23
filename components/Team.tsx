@@ -93,13 +93,13 @@ export default function Team() {
           transition={{ duration: 0.6 }}
           className="bg-[#142250] mb-6 flex flex-col md:flex-row overflow-hidden"
         >
-          <div className="relative w-full md:w-80 aspect-square shrink-0 self-start bg-[#E2E8F0]">
+          <div className="relative w-44 sm:w-56 md:w-80 aspect-square shrink-0 self-center md:self-start bg-[#E2E8F0]">
             <Image
               src={lead.image}
               alt={`${lead.name} — ${lead.title}`}
               fill
               className="object-cover object-top"
-              sizes="(max-width: 768px) 100vw, 320px"
+              sizes="(max-width: 640px) 176px, (max-width: 768px) 224px, 320px"
               priority
             />
           </div>
