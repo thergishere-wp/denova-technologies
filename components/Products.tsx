@@ -14,6 +14,7 @@ const brandLogoMap: Record<string, string> = {
   jingwei: "/brands/jwei-logo.svg",
   ctex: "/brands/ctex-logo.png",
   "mu-bigdata": "/brands/mu-logo.jpg",
+  kasu: "/brands/kasu-logo.png",
 };
 
 export default function Products({ standalone = false }: { standalone?: boolean }) {
@@ -44,7 +45,7 @@ export default function Products({ standalone = false }: { standalone?: boolean 
           </Heading>
           <div className="w-20 h-0.5 bg-[#29B8E8]" />
           <p className="text-[#94A3B8] text-base mt-6 max-w-2xl">
-            Five world-class brands, one partner. Open any catalog for full
+            Six world-class brands, one partner. Open any catalog for full
             product details and specifications.
           </p>
         </motion.div>

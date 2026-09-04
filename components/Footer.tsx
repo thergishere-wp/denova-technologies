@@ -7,6 +7,7 @@ const products = [
   { label: "JINGWEI / JWEI", href: "/products/jingwei" },
   { label: "C-TEX", href: "/products/ctex" },
   { label: "MU Big Data", href: "/products/mu-bigdata" },
+  { label: "KASU", href: "/products/kasu" },
 ];
 
 const industryLinks = [
@@ -29,6 +30,7 @@ const brandLogos = [
   { src: "/brands/jwei-logo.svg", alt: "JWEI", href: "/products/jingwei" },
   { src: "/brands/ctex-logo.png", alt: "C-TEX", href: "/products/ctex" },
   { src: "/brands/mu-logo.jpg", alt: "MU Big Data", href: "/products/mu-bigdata" },
+  { src: "/brands/kasu-logo.png", alt: "KASU", href: "/products/kasu" },
 ];
 
 export default function Footer() {
@@ -166,7 +168,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-center sm:items-end gap-1">
             <div className="text-[#94A3B8] text-[10px] font-mono text-center sm:text-right">
-              Authorized Distributor for DOCAD · Özer Makina · JINGWEI · C-TEX · MU Big Data
+              Authorized Distributor for DOCAD · Özer Makina · JINGWEI · C-TEX · MU Big Data · KASU
             </div>
             <a
               href="https://storyset.com"

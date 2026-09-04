@@ -22,6 +22,7 @@ const brandLogoMap: Record<string, string> = {
   jingwei: "/brands/jwei-logo.svg",
   ctex: "/brands/ctex-logo.png",
   "mu-bigdata": "/brands/mu-logo.jpg",
+  kasu: "/brands/kasu-logo.png",
 };
 
 export async function generateStaticParams() {

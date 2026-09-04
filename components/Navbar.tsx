@@ -20,6 +20,7 @@ const brandLinks = [
   { label: "JINGWEI / JWEI", href: "/products/jingwei" },
   { label: "C-TEX", href: "/products/ctex" },
   { label: "MU Big Data", href: "/products/mu-bigdata" },
+  { label: "KASU", href: "/products/kasu" },
 ];
 
 export default function Navbar() {

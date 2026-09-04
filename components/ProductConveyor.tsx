@@ -10,6 +10,7 @@ const brandLogoMap: Record<string, string> = {
   jingwei: "/brands/jwei-logo.svg",
   ctex: "/brands/ctex-logo.png",
   "mu-bigdata": "/brands/mu-logo.jpg",
+  kasu: "/brands/kasu-logo.png",
 };
 
 // One flagship product per functional category — a breadth-of-range proof
@@ -78,6 +79,14 @@ const items = [
     brandId: "docad",
     href: "/products/docad",
     image: "/products/docad/digitizer.jpg",
+    featured: false,
+  },
+  {
+    name: "Lace Laser Cutting Machine",
+    brand: "KASU",
+    brandId: "kasu",
+    href: "/products/kasu",
+    image: "/products/kasu/lace-laser-cutting-machine.png",
     featured: false,
   },
 ];
@@ -237,7 +246,7 @@ export default function ProductConveyor() {
           Product Line — What We Deliver
         </div>
         <div className="hidden sm:block text-white/30 text-[10px] font-mono uppercase tracking-widest">
-          8 Categories · 5 Brands
+          9 Categories · 6 Brands
         </div>
       </div>
 

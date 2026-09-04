@@ -31,4 +31,10 @@ export const galleryImages: Record<string, GalleryImage[]> = {
     { src: "/products/mu/mu-2.webp", alt: "U-PAD shop floor tablet terminal at a sewing station" },
     { src: "/products/mu/mu-3.png", alt: "MU-MES line balancing and production dashboard" },
   ],
+  kasu: [
+    {
+      src: "/products/kasu/lace-laser-cutting-machine.png",
+      alt: "KASU enclosed lace laser cutting machine with automatic feeding conveyor",
+    },
+  ],
 };

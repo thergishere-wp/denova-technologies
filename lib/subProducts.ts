@@ -331,4 +331,33 @@ export const subProducts: Record<string, SubProductGroup[]> = {
       ],
     },
   ],
+
+  // No per-model photography yet — one shared platform photo represents the
+  // brand overall (see galleryImages.ts / the belt card), so these three
+  // render as branded-face cards until individual shots are available.
+  kasu: [
+    {
+      title: "Laser Cutting Machines",
+      items: [
+        {
+          name: "Lace Border Laser Cutting Machine",
+          slug: "lace-border-laser-cutting-machine",
+          description:
+            "Automatic graphic detection and accurate positioning cut lace borders cleanly without distorting the fabric, running continuously for high-throughput production.",
+        },
+        {
+          name: "Lingerie Lace Laser Cutting Machine",
+          slug: "lingerie-lace-laser-cutting-machine",
+          description:
+            "Tuned for soft, elastic lingerie lace — high-precision cutting that handles stretch and deformation without scorching or fraying delicate fabric.",
+        },
+        {
+          name: "Embroidery Lace Laser Cutting",
+          slug: "embroidery-lace-laser-cutting",
+          description:
+            "Cuts embroidered lace trims and appliqués with automatic graphic detection that follows the embroidery pattern for a precise, continuous edge.",
+        },
+      ],
+    },
+  ],
 };

@@ -17,13 +17,13 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: "DeNova Technologies Ltd | Advanced Manufacturing Solutions",
   description:
-    "Authorized distributor of DOCAD, Özer Makina, JINGWEI, C-TEX and MU Big Data — advanced machinery and software for apparel manufacturers in Sri Lanka & Bangladesh.",
+    "Authorized distributor of DOCAD, Özer Makina, JINGWEI, C-TEX, MU Big Data and KASU — advanced machinery and software for apparel manufacturers in Sri Lanka & Bangladesh.",
   keywords:
     "DeNova Technologies, apparel machinery, CAD software, cutting systems, Sri Lanka, Bangladesh, manufacturing",
   openGraph: {
     title: "DeNova Technologies Ltd | Advanced Manufacturing Solutions",
     description:
-      "Authorized distributor of DOCAD, Özer Makina, JINGWEI, C-TEX and MU Big Data — advanced machinery and software for apparel manufacturers.",
+      "Authorized distributor of DOCAD, Özer Makina, JINGWEI, C-TEX, MU Big Data and KASU — advanced machinery and software for apparel manufacturers.",
     type: "website",
   },
 };

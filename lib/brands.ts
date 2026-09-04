@@ -151,6 +151,31 @@ export const brands: Brand[] = [
     ],
     accentColor: "#29B8E8",
   },
+  {
+    id: "kasu",
+    number: "06",
+    name: "KASU",
+    country: "China",
+    founded: 2009,
+    category: "Lace Laser Cutting Systems",
+    shortDescription:
+      "Laser cutting machines built for lace — precise, automated cuts that handle soft, stretchy, deformation-prone fabric.",
+    description:
+      "KASU Laser is a professional manufacturer of fabric laser cutting machines with over 16 years of experience. The company specializes in laser cutting solutions for textiles and fabrics, including embroidered lace and lingerie lace. Its laser systems are designed to handle the softness, elasticity, and deformation of lace materials while providing accurate and automated cutting.",
+    softwareProducts: [],
+    hardwareProducts: [
+      "Lace Border Laser Cutting Machine",
+      "Lingerie Lace Laser Cutting Machine",
+      "Embroidery Lace Laser Cutting",
+    ],
+    benefits: [
+      "High-Precision Cutting",
+      "Automatic Graphic Detection",
+      "Accurate Positioning",
+      "Continuous Automatic Cutting",
+    ],
+    accentColor: "#29B8E8",
+  },
 ];
 
 export const solutionProductMap: Record<string, string[]> = {
