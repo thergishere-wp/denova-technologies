@@ -33,7 +33,7 @@ export const galleryImages: Record<string, GalleryImage[]> = {
   ],
   kasu: [
     {
-      src: "/products/kasu/lace-laser-cutting-machine.png",
+      src: "/products/kasu/lace-laser-cutting-machine.jpg",
       alt: "KASU enclosed lace laser cutting machine with automatic feeding conveyor",
     },
   ],

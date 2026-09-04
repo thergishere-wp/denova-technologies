@@ -86,7 +86,7 @@ const items = [
     brand: "KASU",
     brandId: "kasu",
     href: "/products/kasu",
-    image: "/products/kasu/lace-laser-cutting-machine.png",
+    image: "/products/kasu/lace-laser-cutting-machine.jpg",
     featured: false,
   },
 ];
