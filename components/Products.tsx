@@ -7,6 +7,7 @@ import Image from "next/image";
 import { brands } from "@/lib/brands";
 import { galleryImages } from "@/lib/galleryImages";
 import ImageRotator from "@/components/ImageRotator";
+import BrochureButtons from "@/components/BrochureButtons";
 
 const brandLogoMap: Record<string, string> = {
   docad: "/brands/docad-logo.jpg",
@@ -17,7 +18,13 @@ const brandLogoMap: Record<string, string> = {
   kasu: "/brands/kasu-logo.png",
 };
 
-export default function Products({ standalone = false }: { standalone?: boolean }) {
+export default function Products({
+  standalone = false,
+  brochures = {},
+}: {
+  standalone?: boolean;
+  brochures?: Record<string, string | null>;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
   const Heading = standalone ? "h1" : "h2";
@@ -101,11 +108,16 @@ export default function Products({ standalone = false }: { standalone?: boolean 
                     {brand.shortDescription}
                   </p>
 
-                  <div className="flex items-center gap-2 text-[#29B8E8] text-xs font-bold uppercase tracking-wider group-hover:gap-3 transition-all duration-150">
-                    View Catalog
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                      <path d="M3 7h8M7 3l4 4-4 4" stroke="#29B8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2 text-[#29B8E8] text-xs font-bold uppercase tracking-wider group-hover:gap-3 transition-all duration-150">
+                      View Catalog
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                        <path d="M3 7h8M7 3l4 4-4 4" stroke="#29B8E8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                    {brochures[brand.id] && (
+                      <BrochureButtons url={brochures[brand.id]!} brandName={brand.name} variant="compact" />
+                    )}
                   </div>
                 </div>
               </Link>

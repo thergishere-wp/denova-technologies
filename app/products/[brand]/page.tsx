@@ -11,6 +11,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ImageRotator from "@/components/ImageRotator";
 import SubProductCard from "@/components/SubProductCard";
+import BrochureButtons from "@/components/BrochureButtons";
+import { getBrochureUrl } from "@/lib/brochures";
 
 interface Props {
   params: Promise<{ brand: string }>;
@@ -45,6 +47,7 @@ export default async function BrandPage({ params }: Props) {
   if (!brand) notFound();
 
   const images = galleryImages[brand.id] ?? [];
+  const brochureUrl = getBrochureUrl(brand.id);
 
   return (
     <>
@@ -139,9 +142,12 @@ export default async function BrandPage({ params }: Props) {
                 </p>
               </div>
             </div>
-            <p className="text-[#94A3B8] text-base sm:text-lg leading-relaxed max-w-3xl">
+            <p className="text-[#94A3B8] text-base sm:text-lg leading-relaxed max-w-3xl mb-6 sm:mb-8">
               {brand.description}
             </p>
+            {brochureUrl && (
+              <BrochureButtons url={brochureUrl} brandName={brand.name} variant="full" />
+            )}
           </div>
         </div>
 

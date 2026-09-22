@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Products from "@/components/Products";
+import { getBrochureMap } from "@/lib/brochures";
 
 export const metadata: Metadata = {
   title: "Products | DeNova Technologies Ltd — Apparel Machinery & Software Distributor",
@@ -12,11 +13,12 @@ export const metadata: Metadata = {
 };
 
 export default function ProductsPage() {
+  const brochures = getBrochureMap();
   return (
     <>
       <Navbar />
       <main className="min-h-screen bg-[#0d1a3d]">
-        <Products standalone />
+        <Products standalone brochures={brochures} />
       </main>
       <Footer />
     </>
