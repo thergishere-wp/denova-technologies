@@ -26,22 +26,22 @@ export interface Brand {
 
 export const brands: Brand[] = [
   {
-    id: "docad",
+    id: "optitex",
     number: "01",
-    name: "DOCAD",
-    country: "Taiwan",
-    founded: 1982,
+    name: "OPTITEX",
+    country: "Israel",
+    founded: 1988,
     category: "CAD Solutions",
     shortDescription:
-      "CAD software that turns your patterns into cutting-ready files — faster, with less fabric waste.",
+      "2D/3D CAD software for pattern design, marker making and cut planning — better pattern accuracy, less fabric waste.",
     description:
-      "Founded in Taiwan in 1982, DOCAD has over four decades of experience in developing CAD/CAM solutions for the apparel industry. Its integrated software and hardware solutions help manufacturers improve accuracy, optimize fabric utilization, and streamline production workflows.",
+      "Founded in 1988, Optitex has over three decades of experience developing digital CAD solutions for the fashion and apparel industry. Its integrated 2D/3D software solutions help brands, retailers, and manufacturers improve pattern accuracy, optimize fabric usage, and streamline design, development, and production workflows.",
     softwareProducts: [
-      "Pattern Creation",
-      "Marker Making",
-      "Auto-Marker",
+      "Pattern Design Software (PDS) 2D & 3D",
+      "Marker Making Suite",
+      "Cut Plan Software",
     ],
-    hardwareProducts: ["Inkjet Plotter", "Digitizer", "Pattern Cutter"],
+    hardwareProducts: [],
     benefits: [
       "Fast Pattern Development",
       "Accurate Pattern Creation",
@@ -179,7 +179,7 @@ export const brands: Brand[] = [
 ];
 
 export const solutionProductMap: Record<string, string[]> = {
-  "cad-pattern": ["docad"],
+  "cad-pattern": ["optitex"],
   "spreading-cutting": ["ozer-makina", "jingwei"],
   "industrial-engineering": ["mu-bigdata"],
   "smart-factory": ["mu-bigdata", "ctex"],
@@ -191,7 +191,7 @@ export const solutions = [
     title: "CAD & Pattern Making Software",
     description: "Precision pattern creation, grading, and marker optimization",
     icon: "cad",
-    brandIds: ["docad"],
+    brandIds: ["optitex"],
   },
   {
     id: "spreading-cutting",

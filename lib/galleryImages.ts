@@ -4,9 +4,11 @@ export interface GalleryImage {
 }
 
 export const galleryImages: Record<string, GalleryImage[]> = {
-  docad: [
-    { src: "/products/docad/docad-1.jpg", alt: "DOCAD CAD software interface" },
-    { src: "/products/docad/docad-2.jpg", alt: "DOCAD CAD/CAM system" },
+  optitex: [
+    { src: "/products/optitex/pattern-design-software.png", alt: "Optitex pattern design software with grading table" },
+    { src: "/products/optitex/cut-plan-software.png", alt: "Optitex cut plan marker library" },
+    { src: "/products/optitex/marker-making-suite.png", alt: "Optitex marker making suite nesting a marker" },
+    { src: "/products/optitex/3d-pattern-design.png", alt: "Optitex 3D fitting with a virtual avatar" },
   ],
   "ozer-makina": [
     { src: "/products/ozer/ozer-1.png", alt: "Özer Makina automatic spreading machine" },

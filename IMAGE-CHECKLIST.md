@@ -6,7 +6,7 @@ Updated 2026-07-14 after placing the sourced images.
 
 | Brand | Product | Source |
 |---|---|---|
-| DOCAD | Pattern Creation, Marker Making, Inkjet Plotter, Digitizer, Pattern Cutter | your downloads (names verified correct) |
+| OPTITEX | Pattern Design Software, Marker Making Suite, Cut Plan Software (+ 3D shot in the carousel) | client's Optitex folder (818px captures) |
 | Özer | Automatic Spreading Machine | your download |
 | JWEI | Pattern Cutter, Template Cutter, Sample Fabric Cutter, Low Ply (MI60), High Ply | your downloads + existing gallery |
 | C-TEX | Inspection, Relaxing, Colour (official diagram), Master (machine close-up) | your downloads + site gallery + c-tex.co.uk banner |
@@ -21,10 +21,9 @@ the right panel. **Zero Unsplash stock remains anywhere on the site.**
 These render the brochure-style branded face. Drop a JPG at the path below and
 redeploy to upgrade them to a photo card — no code changes:
 
-1. `public/products/docad/auto-marker.jpg` — DOCAD's site has no usable image
-2. `public/products/ozer-makina/air-floatation-spreading-tables.jpg` — ⚠️ not on Özer's site (model unconfirmed — ask Shivanthi/Raveen)
-3. `public/products/ozer-makina/conveyorized-spreading-table.jpg` — same
-4. `public/products/ozer-makina/fabric-loaders.jpg` — same
+1. `public/products/ozer-makina/air-floatation-spreading-tables.jpg` — ⚠️ not on Özer's site (model unconfirmed — ask Shivanthi/Raveen)
+2. `public/products/ozer-makina/conveyorized-spreading-table.jpg` — same
+3. `public/products/ozer-makina/fabric-loaders.jpg` — same
 
 ## 📄 Product brochures (PDF downloads)
 
@@ -37,12 +36,12 @@ public/brochures/[brand-id]/[product-slug].pdf
 e.g. `public/brochures/jingwei/low-ply-cutting.pdf`
 
 A **"Download Brochure"** button appears on that product's card automatically
-at the next deploy. Brand ids: `docad`, `ozer-makina`, `jingwei`, `ctex`,
+at the next deploy. Brand ids: `optitex`, `ozer-makina`, `jingwei`, `ctex`,
 `mu-bigdata`. Slugs match the image filenames above.
 
 ## Nice-to-have upgrades later
 
-- Replace `docad/paterncreation1.jpg`-style low-res legacy screenshots if DOCAD
-  sends a modern media kit
+- Replace the Optitex screenshots (818px captures from the company profile) with
+  higher-res official media-kit images if Optitex sends them
 - A real Özer air-floatation/loader photo set from the Özer rep
 - Higher-res C-TEX Master shot (current one is a crop from their web banner)

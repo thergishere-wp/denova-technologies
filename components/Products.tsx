@@ -10,7 +10,7 @@ import ImageRotator from "@/components/ImageRotator";
 import BrochureButtons from "@/components/BrochureButtons";
 
 const brandLogoMap: Record<string, string> = {
-  docad: "/brands/docad-logo.jpg",
+  optitex: "/brands/optitex-logo.png",
   "ozer-makina": "/brands/ozer-logo.png",
   jingwei: "/brands/jwei-logo.svg",
   ctex: "/brands/ctex-logo.png",

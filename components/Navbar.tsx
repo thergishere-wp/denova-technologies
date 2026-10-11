@@ -15,7 +15,7 @@ const navLinks = [
 ];
 
 const brandLinks = [
-  { label: "DOCAD", href: "/products/docad" },
+  { label: "OPTITEX", href: "/products/optitex" },
   { label: "Özer Makina", href: "/products/ozer-makina" },
   { label: "JINGWEI / JWEI", href: "/products/jingwei" },
   { label: "C-TEX", href: "/products/ctex" },

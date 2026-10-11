@@ -7,6 +7,11 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "lh3.googleusercontent.com" },
     ],
   },
+  async redirects() {
+    return [
+      { source: "/products/docad", destination: "/products/optitex", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

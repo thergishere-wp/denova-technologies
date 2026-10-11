@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const brandLogoMap: Record<string, string> = {
-  docad: "/brands/docad-logo.jpg",
+  optitex: "/brands/optitex-logo.png",
   "ozer-makina": "/brands/ozer-logo.png",
   jingwei: "/brands/jwei-logo.svg",
   ctex: "/brands/ctex-logo.png",
@@ -17,19 +17,19 @@ const brandLogoMap: Record<string, string> = {
 // strip, deliberately not one-per-brand or the full catalog.
 const items = [
   {
-    name: "CAD & Pattern Making Software",
-    brand: "DOCAD",
-    brandId: "docad",
-    href: "/products/docad",
-    image: "/products/docad/pattern-creation.jpg",
+    name: "Pattern Design Software (2D & 3D)",
+    brand: "OPTITEX",
+    brandId: "optitex",
+    href: "/products/optitex",
+    image: "/products/optitex/pattern-design-software.png",
     featured: false,
   },
   {
-    name: "Inkjet Plotter",
-    brand: "DOCAD",
-    brandId: "docad",
-    href: "/products/docad",
-    image: "/products/docad/inkjet-plotter.jpg",
+    name: "Marker Making Suite",
+    brand: "OPTITEX",
+    brandId: "optitex",
+    href: "/products/optitex",
+    image: "/products/optitex/marker-making-suite.png",
     featured: false,
   },
   {
@@ -74,11 +74,11 @@ const items = [
     featured: false,
   },
   {
-    name: "Digitizer",
-    brand: "DOCAD",
-    brandId: "docad",
-    href: "/products/docad",
-    image: "/products/docad/digitizer.jpg",
+    name: "Cut Plan Software",
+    brand: "OPTITEX",
+    brandId: "optitex",
+    href: "/products/optitex",
+    image: "/products/optitex/cut-plan-software.png",
     featured: false,
   },
   {

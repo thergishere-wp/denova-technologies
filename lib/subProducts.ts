@@ -28,83 +28,32 @@ export interface SubProductGroup {
 }
 
 export const subProducts: Record<string, SubProductGroup[]> = {
-  docad: [
+  // Brochure-level copy only (from the OPTITEX page of the company profile).
+  // Do not add specs until verified against Optitex's own material.
+  optitex: [
     {
       title: "Software Solutions",
       items: [
         {
-          name: "Pattern Creation",
-          slug: "pattern-creation",
-          image: "/products/docad/pattern-creation.jpg",
+          name: "Pattern Design Software (PDS) 2D & 3D",
+          slug: "pattern-design-software",
+          image: "/products/optitex/pattern-design-software.png",
           description:
-            "Rapid, accurate direct pattern creation from size-spec measurements, with exclusive NUMBER (tall/short) and SHAPE (fat/thin) sizing functions. Over 800 pattern functions cover darts, pleats, and connect/trim automation, plus unlimited multi-stage automatic grading that runs 3x faster than standard. Supports AAMA, TIIP, HPGL and other industry data formats.",
-          specs: [
-            { label: "Functions", value: "800+" },
-            { label: "Auto-Grading", value: "3x Faster" },
-            { label: "Formats", value: "AAMA · TIIP · HPGL" },
-          ],
+            "Integrated 2D and 3D pattern design — develop and grade patterns in 2D and check fit on a 3D avatar, improving pattern accuracy and shortening design and development cycles.",
         },
         {
-          name: "Marker Making",
-          slug: "marker-making",
-          image: "/products/docad/marker-making.jpg",
+          name: "Marker Making Suite",
+          slug: "marker-making-suite",
+          image: "/products/optitex/marker-making-suite.png",
           description:
-            "Combines manual and computer-assisted marker layout with accurate fabric grain alignment and a quick-slide fabric-saving function. Fabric consumption and remaining patterns display in real time, with shrink compensation and pattern overlap control. Supports lattice/plaid matching, DXF import/export, and connects to major automatic cutting brands.",
-          specs: [
-            { label: "Consumption", value: "Real-Time Display" },
-            { label: "Plaid Matching", value: "Lattice / Plaid" },
-            { label: "Exchange", value: "DXF In / Out" },
-          ],
+            "Marker making tools that lay patterns out efficiently on the fabric, helping optimize fabric usage and reduce material cost.",
         },
         {
-          name: "Auto-Marker",
-          slug: "auto-marker",
+          name: "Cut Plan Software",
+          slug: "cut-plan-software",
+          image: "/products/optitex/cut-plan-software.png",
           description:
-            "Intelligent AutoMarker & Code Plan System — set the fabric width and assortment count and the system runs hundreds of layout combinations automatically. Delivers markers 10–20x faster than manual layout while cutting fabric loss and cost by up to 8%.",
-          specs: [
-            { label: "Speed", value: "10–20x Faster" },
-            { label: "Fabric Savings", value: "Up to 8%" },
-          ],
-        },
-      ],
-    },
-    {
-      title: "Hardware Solutions",
-      items: [
-        {
-          name: "Inkjet Plotter",
-          slug: "inkjet-plotter",
-          image: "/products/docad/inkjet-plotter.jpg",
-          description:
-            "DOCAD Series Apparel CAD Vector Inkjet Plotter, offered in the IOLINE FJ8-H/FJEX (USA) and POPJET1600/1800 (China) lines. Plots at widths up to 2.2m with ±0.002mm accuracy, engineered for 24-hour continuous operation.",
-          specs: [
-            { label: "Plotting Width", value: "Up to 2.2m" },
-            { label: "Accuracy", value: "±0.002mm" },
-            { label: "Operation", value: "24hr Continuous" },
-          ],
-        },
-        {
-          name: "Digitizer",
-          slug: "digitizer",
-          image: "/products/docad/digitizer.jpg",
-          description:
-            "DOCAD digital digitizing tablet, available as models HIPO3648 and HIPO4460 in A0/A00 large formats. Reads at 100–12,800 line resolution and 10–200 pairs per second, outputting to 31 industry-standard formats.",
-          specs: [
-            { label: "Format", value: "A0 / A00" },
-            { label: "Resolution", value: "100–12,800 Lines" },
-            { label: "Output", value: "31 Formats" },
-          ],
-        },
-        // TODO(Dinesh): Confirm the exact DOCAD cutting plotter model before
-        // launch — DOCAD's site groups this under "Cutting Plotter"
-        // (hardware_3.htm). Description below is brochure-level only; do NOT
-        // present specs as verified fact until confirmed.
-        {
-          name: "Pattern Cutter",
-          slug: "pattern-cutter",
-          image: "/products/docad/pattern-cutter.jpg",
-          description:
-            "Precision cutting plotter hardware that completes DOCAD's integrated CAD/CAM workflow, cutting finished patterns directly from the software suite.",
+            "Cut plan software for preparing and managing the markers that feed the cutting room, helping streamline production workflows from layout to cut.",
         },
       ],
     },
