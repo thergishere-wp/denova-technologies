@@ -62,6 +62,18 @@ const team = [
     ],
     image: "/team/raveen-lankanatha.png",
   },
+  {
+    name: "Max Hassan",
+    title: "Manager — Business Development",
+    credentials: [
+      "13+ years in IT, marketing, business analysis, branding & strategy",
+      "Expertise in IT solutions, AI integration, digital transformation & international relations",
+      "Experience in diverse technology-driven product development",
+      "Strong understanding of business requirements, digital systems & emerging technologies",
+      "BSc — Troy University of Alabama (USA)",
+    ],
+    image: "/team/max-hassan.jpg",
+  },
 ];
 
 export default function Team() {
@@ -131,7 +143,9 @@ export default function Team() {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.15 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="group hover:-translate-y-1 transition-transform duration-150 flex flex-row bg-[#142250] overflow-hidden"
+              className={`group hover:-translate-y-1 transition-transform duration-150 flex flex-row bg-[#142250] overflow-hidden ${
+                i === team.length - 1 && team.length % 2 === 1 ? "sm:col-span-2" : ""
+              }`}
             >
               <div className="relative w-28 sm:w-40 aspect-square shrink-0 self-start bg-[#E2E8F0]">
                 <Image
