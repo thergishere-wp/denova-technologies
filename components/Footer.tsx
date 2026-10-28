@@ -145,7 +145,7 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               {[
                 { country: "Sri Lanka", phone: "+94 777 395884" },
-                { country: "Bangladesh", phone: "+880 1817-079822" },
+                { country: "Bangladesh", phone: "+880 1711-370209" },
                 { country: "New Zealand", phone: "+64 27 5555880" },
               ].map((c) => (
                 <div key={c.country}>

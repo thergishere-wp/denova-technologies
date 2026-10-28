@@ -26,7 +26,7 @@ const countries = [
   {
     name: "Bangladesh",
     market: "Primary apparel manufacturing hub — one of the world's largest RMG export sectors.",
-    phone: "+880 1817-079822",
+    phone: "+880 1711-370209",
   },
   {
     name: "Kenya",

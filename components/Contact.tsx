@@ -28,7 +28,7 @@ const offices = [
   },
   {
     country: "Bangladesh",
-    phone: "+880 1817-079822",
+    phone: "+880 1711-370209",
   },
   {
     country: "New Zealand",
