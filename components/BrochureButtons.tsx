@@ -37,7 +37,7 @@ export default function BrochureButtons({ url, brandName, variant }: Props) {
 
   return (
     <>
-      <div className="flex items-center gap-2 sm:gap-3">
+      <div className="flex flex-wrap items-center gap-2 sm:gap-3">
         <button
           onClick={() => setOpen(true)}
           className="inline-flex items-center gap-2 bg-[#142250] border border-white/10 text-white text-xs font-bold uppercase tracking-widest px-4 sm:px-5 py-2.5 sm:py-3 hover:border-[#29B8E8]/50 hover:text-[#29B8E8] transition-colors duration-150 cursor-pointer"

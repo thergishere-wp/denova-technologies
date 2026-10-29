@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { SubProduct } from "@/lib/subProducts";
+import BrochureButtons from "@/components/BrochureButtons";
 
 interface Props {
   product: SubProduct;
@@ -87,18 +88,19 @@ export default function SubProductCard({
           </div>
         )}
 
-        {/* Digital brochure download — appears when the PDF is dropped in */}
+        {/* Product brochure — View (in-page popup) + Download; appears when the PDF is dropped in */}
         {brochureUrl && (
-          <a
-            href={brochureUrl}
-            download
-            className="mt-5 inline-flex items-center gap-2 border border-[#29B8E8]/40 text-[#29B8E8] hover:bg-[#29B8E8] hover:text-[#0d1a3d] transition-colors duration-150 text-[11px] font-bold uppercase tracking-widest px-4 py-2.5 self-start"
-          >
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M7 1v8M4 6l3 3 3-3M2 12h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            Download Brochure
-          </a>
+          <div className="mt-5">
+            <BrochureButtons
+              url={brochureUrl}
+              brandName={
+                product.name.toLowerCase().startsWith(brandName.toLowerCase())
+                  ? product.name
+                  : `${brandName} ${product.name}`
+              }
+              variant="full"
+            />
+          </div>
         )}
       </div>
     </div>
