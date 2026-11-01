@@ -45,9 +45,9 @@ const items = [
     brand: "JWEI",
     brandId: "jingwei",
     href: "/products/jingwei",
-    image: "/products/jingwei/low-ply-cutting.jpg",
+    image: "/products/jingwei/mi60.jpg",
     featured: true,
-    specs: ["100m/min", "0.01mm accuracy"],
+    specs: ["100m/min", "≤1mm cutting error"],
   },
   {
     name: "Fabric Inspection Machine",

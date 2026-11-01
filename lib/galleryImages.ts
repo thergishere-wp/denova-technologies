@@ -18,7 +18,7 @@ export const galleryImages: Record<string, GalleryImage[]> = {
     },
   ],
   jingwei: [
-    { src: "/products/jwei/jwei-1.png", alt: "JWEI pattern cutter" },
+    { src: "/products/jwei/jwei-1.png", alt: "JWEI TBP05-2218-RQ digital cutting machine" },
     { src: "/products/jwei/jwei-2.png", alt: "JWEI digital cutting system" },
     { src: "/products/jwei/jwei-3.jpg", alt: "JWEI cutting machine" },
     { src: "/products/jwei/jwei-multilayer.png", alt: "JWEI multilayer cutting system" },

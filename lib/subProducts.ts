@@ -148,30 +148,35 @@ export const subProducts: Record<string, SubProductGroup[]> = {
     {
       title: "Multilayer Cutting System",
       items: [
+        // Low Ply = JWEI's TB05-2218 small-batch cutter (photo shows model
+        // TBP05-2218-RQ); High Ply = the MI60. JWEI's site lists the MI family as
+        // the "Multi-Layer Cutting System" and the TB05-2218 under small-batch
+        // garment production & sampling. Only the model and application are
+        // verified for the TB05 — TODO(Dinesh): confirm ply capacity / specs with
+        // JWEI before adding any numbers here.
         {
           name: "Low Ply Cutting",
           slug: "low-ply-cutting",
-          image: "/products/jingwei/low-ply-cutting.jpg",
+          image: "/products/jingwei/tb05-2218-rq.jpg",
           description:
-            "Powered by JWEI's MI60 Multi-Layer Cutting System with True On-the-Fly Cutting technology running at up to 100m/min. AI vision positioning and zero-gap cutting save 5% material, while the German Beckhoff AX5206 servo system holds 0.01mm control accuracy. Cuts knits, denim, wovens, automotive composite PVC, synthetic leather, and polyester.",
+            "JWEI's TB05-2218 digital cutter (shown: model TBP05-2218-RQ) for small-batch garment production and sampling — the flexible option for lower-ply cutting. For taller stacks and high-volume cutting, see High Ply Cutting.",
           specs: [
-            { label: "Max Speed", value: "100m/min" },
-            { label: "Control Accuracy", value: "0.01mm" },
-            { label: "Interlayer Tolerance", value: "≤1mm" },
-            { label: "Material Savings", value: "5%" },
+            { label: "Series", value: "TB05-2218" },
+            { label: "Shown Model", value: "TBP05-2218-RQ" },
           ],
         },
+        // Specs below are from the JWEI MI60 brochure and official product page.
         {
           name: "High Ply Cutting",
           slug: "high-ply-cutting",
-          image: "/products/jingwei/high-ply-cutting.jpg",
+          image: "/products/jingwei/mi60.jpg",
           description:
-            "The MI60 platform configured for high-ply work, cutting stacks up to 60mm high across an effective 1.8m x 2.0m cutting window. The same Beckhoff-driven 0.01mm control accuracy and ≤1mm interlayer tolerance apply at full 100m/min running speed — the strongest throughput-to-precision ratio in its class.",
+            "JWEI's MI60 Multi-Layer Intelligent Cutting System, cutting stacks up to 60mm high across an effective 1.8m × 2.0m window with a cutting-while-moving function for continuous cutting. Runs at up to 100m/min with a cutting error of ≤1mm; a German Beckhoff AX5206 servo system delivers control accuracy up to 0.01mm, and zero-buffer layouts save up to 5% fabric (based on customer testing). Cuts knitted fabrics, denim, wovens, automotive composite PVC, artificial leather, polyester and other flexible materials.",
           specs: [
             { label: "Cutting Height", value: "60mm" },
             { label: "Max Speed", value: "100m/min" },
             { label: "Cutting Window", value: "1.8m × 2.0m" },
-            { label: "Interlayer Tolerance", value: "≤1mm" },
+            { label: "Cutting Error", value: "≤1mm" },
           ],
         },
       ],
