@@ -13,7 +13,21 @@ const heroSlides = [
     src: "/images/hero-flatbed.jpg",
     alt: "JWEI flatbed digital cutter with automatic collection",
   },
+  {
+    src: "/products/kasu/lace-laser-cutting-machine.jpg",
+    alt: "KASU enclosed lace laser cutting machine with automatic feeding conveyor",
+  },
+  {
+    src: "/images/hero-spreader.jpg",
+    alt: "Özer Makina automatic spreading machine laying patterned fabric",
+  },
+  {
+    src: "/products/jingwei/template-cutter.jpg",
+    alt: "JWEI template cutter with gantry and cutting head",
+  },
 ];
+// Machines only, no software screenshots. Order alternates dark / light
+// renders so the cross-fade never goes light-to-light.
 
 // Dimmed full-bleed background — advanced automated manufacturing imagery
 const bgSlides = [
