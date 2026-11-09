@@ -10,6 +10,8 @@ interface Props {
   brandLogo: string;
   /** Set when /public/brochures/[brand]/[slug].pdf exists (checked at build). */
   brochureUrl?: string;
+  /** Set when /public/brochures/[brand]/[slug]-presentation.pdf exists. */
+  presentationUrl?: string;
 }
 
 export default function SubProductCard({
@@ -18,7 +20,13 @@ export default function SubProductCard({
   brandName,
   brandLogo,
   brochureUrl,
+  presentationUrl,
 }: Props) {
+  // "MU Big Data MU-GST", but not "C-TEX C-TEX Color"
+  const docName = product.name.toLowerCase().startsWith(brandName.toLowerCase())
+    ? product.name
+    : `${brandName} ${product.name}`;
+
   return (
     <div className="group bg-[#1B2F68] border border-white/10 hover:border-[#29B8E8]/60 transition-colors duration-150 flex flex-col">
       <div className="relative aspect-[4/3] bg-[#142250] overflow-hidden">
@@ -88,18 +96,20 @@ export default function SubProductCard({
           </div>
         )}
 
-        {/* Product brochure — View (in-page popup) + Download; appears when the PDF is dropped in */}
-        {brochureUrl && (
-          <div className="mt-5">
-            <BrochureButtons
-              url={brochureUrl}
-              brandName={
-                product.name.toLowerCase().startsWith(brandName.toLowerCase())
-                  ? product.name
-                  : `${brandName} ${product.name}`
-              }
-              variant="full"
-            />
+        {/* Product brochure / presentation — View (in-page popup) + Download; each appears when its PDF is dropped in */}
+        {(brochureUrl || presentationUrl) && (
+          <div className="mt-5 flex flex-col gap-2 sm:gap-3">
+            {brochureUrl && (
+              <BrochureButtons url={brochureUrl} brandName={docName} variant="full" />
+            )}
+            {presentationUrl && (
+              <BrochureButtons
+                url={presentationUrl}
+                brandName={docName}
+                variant="full"
+                label="Presentation"
+              />
+            )}
           </div>
         )}
       </div>

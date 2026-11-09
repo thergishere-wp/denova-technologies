@@ -181,6 +181,11 @@ export default async function BrandPage({ params }: Props) {
                   const hasBrochure = existsSync(
                     path.join(process.cwd(), "public", brochure)
                   );
+                  // Optional slide deck for the same product: {slug}-presentation.pdf
+                  const presentation = `/brochures/${brand.id}/${product.slug}-presentation.pdf`;
+                  const hasPresentation = existsSync(
+                    path.join(process.cwd(), "public", presentation)
+                  );
                   return (
                     <SubProductCard
                       key={product.slug}
@@ -189,6 +194,7 @@ export default async function BrandPage({ params }: Props) {
                       brandName={brand.name}
                       brandLogo={brandLogoMap[brand.id]}
                       brochureUrl={hasBrochure ? brochure : undefined}
+                      presentationUrl={hasPresentation ? presentation : undefined}
                     />
                   );
                 })}

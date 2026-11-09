@@ -6,10 +6,12 @@ import { createPortal } from "react-dom";
 interface Props {
   url: string;
   brandName: string;
+  /** What the document is called in the header — "Brochure" by default. */
+  label?: string;
   onClose: () => void;
 }
 
-export default function BrochureModal({ url, brandName, onClose }: Props) {
+export default function BrochureModal({ url, brandName, label = "Brochure", onClose }: Props) {
   const closeBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -35,14 +37,14 @@ export default function BrochureModal({ url, brandName, onClose }: Props) {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label={`${brandName} brochure`}
+        aria-label={`${brandName} ${label.toLowerCase()}`}
         onClick={(e) => e.stopPropagation()}
         className="relative bg-[#0d1a3d] border border-white/10 w-full h-full max-w-5xl max-h-[90vh] flex flex-col"
       >
         {/* Header */}
         <div className="flex items-center justify-between gap-4 px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10 shrink-0">
           <div className="text-white text-sm sm:text-base font-bold uppercase tracking-wide truncate">
-            {brandName} <span className="text-[#94A3B8] font-normal">— Brochure</span>
+            {brandName} <span className="text-[#94A3B8] font-normal">— {label}</span>
           </div>
           <div className="flex items-center gap-2 shrink-0">
             <a
@@ -58,7 +60,7 @@ export default function BrochureModal({ url, brandName, onClose }: Props) {
             <button
               ref={closeBtnRef}
               onClick={onClose}
-              aria-label="Close brochure viewer"
+              aria-label={`Close ${label.toLowerCase()} viewer`}
               className="w-11 h-11 flex items-center justify-center text-[#94A3B8] hover:text-white hover:bg-white/5 transition-colors duration-150 cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-[#29B8E8]"
             >
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -71,7 +73,7 @@ export default function BrochureModal({ url, brandName, onClose }: Props) {
         {/* PDF */}
         <iframe
           src={url}
-          title={`${brandName} brochure`}
+          title={`${brandName} ${label.toLowerCase()}`}
           className="flex-1 w-full bg-white"
         />
       </div>

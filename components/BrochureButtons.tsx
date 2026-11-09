@@ -7,9 +7,11 @@ interface Props {
   url: string;
   brandName: string;
   variant: "full" | "compact";
+  /** Document type shown on the buttons — "Brochure" by default. */
+  label?: string;
 }
 
-export default function BrochureButtons({ url, brandName, variant }: Props) {
+export default function BrochureButtons({ url, brandName, variant, label = "Brochure" }: Props) {
   const [open, setOpen] = useState(false);
 
   if (variant === "compact") {
@@ -21,8 +23,8 @@ export default function BrochureButtons({ url, brandName, variant }: Props) {
             e.stopPropagation();
             setOpen(true);
           }}
-          aria-label={`View ${brandName} brochure`}
-          title="View Brochure"
+          aria-label={`View ${brandName} ${label.toLowerCase()}`}
+          title={`View ${label}`}
           className="w-11 h-11 flex items-center justify-center bg-[#142250] border border-white/10 text-[#94A3B8] hover:text-[#29B8E8] hover:border-[#29B8E8]/50 transition-colors duration-150 cursor-pointer shrink-0"
         >
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -30,7 +32,7 @@ export default function BrochureButtons({ url, brandName, variant }: Props) {
             <path d="M11 1.5v3h3" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
           </svg>
         </button>
-        {open && <BrochureModal url={url} brandName={brandName} onClose={() => setOpen(false)} />}
+        {open && <BrochureModal url={url} brandName={brandName} label={label} onClose={() => setOpen(false)} />}
       </>
     );
   }
@@ -46,7 +48,7 @@ export default function BrochureButtons({ url, brandName, variant }: Props) {
             <path d="M4 1.5h7l3 3v12a.5.5 0 01-.5.5h-9a.5.5 0 01-.5-.5V2a.5.5 0 01.5-.5z" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
             <path d="M11 1.5v3h3" stroke="currentColor" strokeWidth="1.3" strokeLinejoin="round" />
           </svg>
-          View Brochure
+          View {label}
         </button>
         <a
           href={url}
@@ -56,10 +58,10 @@ export default function BrochureButtons({ url, brandName, variant }: Props) {
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path d="M7 1.5v8M3.5 6.5L7 10l3.5-3.5M2 12.5h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          Download Brochure
+          Download {label}
         </a>
       </div>
-      {open && <BrochureModal url={url} brandName={brandName} onClose={() => setOpen(false)} />}
+      {open && <BrochureModal url={url} brandName={brandName} label={label} onClose={() => setOpen(false)} />}
     </>
   );
 }
