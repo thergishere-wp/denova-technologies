@@ -2,9 +2,10 @@ import { existsSync } from "fs";
 import path from "path";
 import { brands } from "./brands";
 
-// One brochure PDF per brand — drop a file at public/brochures/{brandId}.pdf
-// and it appears automatically, no code change needed. Brands without a file
-// yet just don't render the brochure buttons.
+// Brand-level brochure — only for a PDF that covers the whole brand (all
+// products in one). Drop it at public/brochures/{brandId}.pdf and it appears
+// automatically. Single-product brochures belong at
+// public/brochures/{brandId}/{productSlug}.pdf instead (see the brand page).
 export function getBrochureUrl(brandId: string): string | null {
   const rel = `/brochures/${brandId}.pdf`;
   const abs = path.join(process.cwd(), "public", rel);

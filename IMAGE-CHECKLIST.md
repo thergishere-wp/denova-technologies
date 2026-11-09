@@ -27,17 +27,22 @@ redeploy to upgrade them to a photo card — no code changes:
 
 ## 📄 Product brochures (PDF downloads)
 
-Drop each product's digital brochure at:
+A brochure that covers a **single product** goes at:
 
 ```
 public/brochures/[brand-id]/[product-slug].pdf
 ```
 
-e.g. `public/brochures/jingwei/low-ply-cutting.pdf`
+e.g. `public/brochures/jingwei/high-ply-cutting.pdf`
 
-A **"Download Brochure"** button appears on that product's card automatically
+View / Download Brochure buttons appear on that product's card automatically
 at the next deploy. Brand ids: `optitex`, `ozer-makina`, `jingwei`, `ctex`,
-`mu-bigdata`. Slugs match the image filenames above.
+`mu-bigdata`, `kasu`. Slugs match the image filenames above.
+
+A brochure that covers **the whole brand** (all products in one) goes at
+`public/brochures/[brand-id].pdf` and shows at the top of the brand page and
+on the `/products` catalog card. Only add one if it really covers every
+product — a single-product brochure here would be misleading.
 
 ## Nice-to-have upgrades later
 
