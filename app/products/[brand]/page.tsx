@@ -235,7 +235,7 @@ export default async function BrandPage({ params }: Props) {
             </div>
             <Link
               href="/#contact"
-              className="bg-[#1E6CC8] text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#29B8E8] transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer"
+              className="bg-[#1E6CC8] text-white text-xs font-bold uppercase tracking-widest px-8 py-4 hover:bg-[#29B8E8] transition-colors duration-150 text-center sm:whitespace-nowrap sm:shrink-0 cursor-pointer"
             >
               Request a Quote for {brand.name}
             </Link>

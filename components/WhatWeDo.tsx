@@ -37,7 +37,8 @@ export default function WhatWeDo() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-14 sm:py-20 lg:py-32 bg-[#F0F4FF]" ref={ref}>
+    // overflow-x-clip: the cards slide in from x:60, which phones otherwise count as scrollable width
+    <section id="about" className="py-14 sm:py-20 lg:py-32 bg-[#F0F4FF] overflow-x-clip" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
           {/* Left */}

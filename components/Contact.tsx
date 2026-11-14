@@ -79,7 +79,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-14 sm:py-20 lg:py-32 bg-[#142250]" ref={ref}>
+    // overflow-x-clip: the form column slides in from x:40, which phones otherwise count as scrollable width
+    <section id="contact" className="py-14 sm:py-20 lg:py-32 bg-[#142250] overflow-x-clip" ref={ref}>
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
