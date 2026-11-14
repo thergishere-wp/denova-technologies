@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import SocialLinks from "@/components/SocialLinks";
 
 const products = [
   { label: "OPTITEX", href: "/products/optitex" },
@@ -86,6 +87,12 @@ export default function Footer() {
                 dinesh@denovatech.com
               </a>
               <span className="text-[#94A3B8] text-xs font-mono">www.denovatec.com</span>
+            </div>
+            <div className="mt-6">
+              <div className="text-[#94A3B8]/60 text-[10px] font-mono uppercase tracking-widest mb-3">
+                Follow Us
+              </div>
+              <SocialLinks />
             </div>
           </div>
 

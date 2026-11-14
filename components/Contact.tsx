@@ -3,6 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import Image from "next/image";
+import SocialLinks from "@/components/SocialLinks";
 
 const WHATSAPP_LINK = "https://wa.me/94777395884";
 
@@ -204,6 +205,12 @@ export default function Contact() {
                   </div>
                   <span className="text-white font-bold">www.denovatec.com</span>
                 </div>
+              </div>
+              <div className="pt-4">
+                <div className="text-[#94A3B8] text-[10px] font-mono uppercase tracking-widest mb-3">
+                  Follow Us
+                </div>
+                <SocialLinks />
               </div>
             </div>
           </motion.div>
