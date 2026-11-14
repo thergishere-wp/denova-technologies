@@ -9,6 +9,6 @@ export const SOCIAL_LINKS = [
   {
     id: "facebook",
     label: "Facebook",
-    href: "https://www.facebook.com/share/14rxhqZP5o9/",
+    href: "https://www.facebook.com/denovatec/",
   },
 ] as const;
