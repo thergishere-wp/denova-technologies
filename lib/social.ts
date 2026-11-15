@@ -11,4 +11,9 @@ export const SOCIAL_LINKS = [
     label: "Facebook",
     href: "https://www.facebook.com/denovatec/",
   },
+  {
+    id: "linkedin",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/denovatec/",
+  },
 ] as const;
