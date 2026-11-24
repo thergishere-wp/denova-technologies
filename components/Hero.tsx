@@ -84,7 +84,7 @@ export default function Hero() {
                   className="text-[1.85rem] sm:text-4xl md:text-5xl xl:text-7xl font-bold uppercase tracking-tight text-white leading-[0.9] mb-2 whitespace-nowrap overflow-visible"
                   style={{ hyphens: "none" }}
                 >
-                  ADVANCED
+                  INTELLIGENT
                 </motion.h1>
               </div>
               <div className="overflow-visible">
@@ -106,7 +106,8 @@ export default function Hero() {
               className="text-[#94A3B8] text-base sm:text-lg leading-relaxed max-w-lg mb-6 sm:mb-10"
             >
               Providing cutting-edge machinery and intelligent software systems
-              for apparel and non-apparel industries in Sri Lanka &amp; Bangladesh.
+              for apparel and non-apparel industries in Sri Lanka, Bangladesh
+              &amp; New Zealand.
             </motion.p>
 
             <motion.div
